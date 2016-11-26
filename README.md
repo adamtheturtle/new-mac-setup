@@ -52,7 +52,8 @@ In System Preferences, set the following settings:
 
 * MacTex
 * Homebrew
-* Homebrew packages:
+
+Install the following packages.
 
 	# Install Pythons
 	brew install python
