@@ -75,13 +75,7 @@ Install the following packages.
 	pip3 install neovim
 
 * [pipsi](https://github.com/mitsuhiko/pipsi)
-* [fisherman](https://github.com/fisherman/fisherman)
 * Docker for Mac
-
-And Docker completion for `fish`:
-
-	fisher install barnybug/docker-fish-completion
-
 * WhatsApp
 * Messenger for Facebook
 * TextMate
@@ -93,13 +87,20 @@ And Docker completion for `fish`:
 
 ### Configure Fish shell
 
+Install [fisherman](https://github.com/fisherman/fisherman)
+
+And extensions for `fish`:
+
+	fisher install barnybug/docker-fish-completion
+	fisher instaltl adamtheturtle/virtualfish-prompt
+
 Add `/usr/local/bin/fish` to `/etc/shells`.
 
 	chsh -s $(which fish)
 
 	/usr/local/opt/python/bin/pip install virtualfish
 
-[Add Virtualfish prompt](http://virtualfish.readthedocs.io/en/latest/install.html#customizing-your-fish-prompt).
+### Set up printer
 
 # After iCloud and Dropbox sync
 
