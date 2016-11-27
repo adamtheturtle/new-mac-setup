@@ -74,8 +74,14 @@ Install the following packages.
 	pip2 install neovim
 	pip3 install neovim
 
-* [pipsi](https://github.com/mitsuhiko/pipsi).
+* [pipsi](https://github.com/mitsuhiko/pipsi)
+* [fisherman](https://github.com/fisherman/fisherman)
 * Docker for Mac
+
+And Docker completion for `fish`:
+
+	fisher install barnybug/docker-fish-completion
+
 * WhatsApp
 * Messenger for Facebook
 * TextMate
@@ -164,6 +170,15 @@ Install [vim-plug](https://github.com/junegunn/vim-plug#installation).
 Install plugins with `:PlugInstall`.
 
 [Compile YouCompleteMe](https://github.com/Valloric/YouCompleteMe#mac-os-x) with support for C-family languages.
+
+## Shimo
+
+Preferenes > Advanced > Storage > Choose Shimo directory in Dropbox.
+Preferences > General > Show Shimo in "Menubar only".
+
+### Quiver
+
+Preferences > Sync > Quiver directory in Dropbox.
 
 ## Gestures
 
