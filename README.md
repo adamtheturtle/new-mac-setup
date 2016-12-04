@@ -160,7 +160,7 @@ Move SSH Keys from `SSH Keys` from 1Password to `~/.ssh`.
 
 Clone dotfiles and move them into place.
 
-	cd ~
+	cd ~/Documents
 	git clone git@github.com:adamtheturtle/dotfiles.git
 	cd dotfiles
 	./makesymlinks.sh
@@ -171,6 +171,10 @@ Install [vim-plug](https://github.com/junegunn/vim-plug#installation).
 Install plugins with `:PlugInstall`.
 
 [Compile YouCompleteMe](https://github.com/Valloric/YouCompleteMe#mac-os-x) with support for C-family languages.
+
+Install Flake8 to be used in Neovim:
+
+	pipsi install flake8
 
 ## Shimo
 
