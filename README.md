@@ -67,7 +67,12 @@ Install the following packages.
 	brew install reattach-to-user-namespace
 	# Allow the terminal to be shared
 	brew install tmate
+	# Install text editor
 	brew install neovim
+	# Required for CtrlSF for Neovim
+	brew install ack
+	# Required for Tagbar in Neovim
+	brew install ctags
 
 * Python client for Neovim
 
