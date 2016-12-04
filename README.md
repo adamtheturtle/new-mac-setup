@@ -73,6 +73,8 @@ Install the following packages.
 	brew install ack
 	# Required for Tagbar in Neovim
 	brew install ctags
+	# A nice way to download things
+	brew install wget
 
 * Python client for Neovim
 
