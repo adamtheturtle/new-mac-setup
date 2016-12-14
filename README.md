@@ -119,6 +119,7 @@ Choose the 1Password keychain in Dropbox > 1Password
 
 Install Safari extensions:
 	* Grammarly
+		* Set the language to American English
 	* 1Password
 	* RES
 	* 1Blocker
