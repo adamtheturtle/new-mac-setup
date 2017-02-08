@@ -55,7 +55,7 @@ In System Preferences, set the following settings:
 
 Install Homebrew packages.
 
-	curl -O XXX
+	curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/Brewfile
 	brew tap homebrew/bundle
 	brew bundle
 
