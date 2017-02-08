@@ -53,8 +53,9 @@ In System Preferences, set the following settings:
 * MacTex
 * Homebrew
 
-Install Homebrew packages.
+Install Homebrew and its packages.
 
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/Brewfile
 	brew tap homebrew/bundle
 	brew bundle
