@@ -70,9 +70,7 @@ Install Homebrew and its packages.
 * WhatsApp
 * Messenger for Facebook
 * TextMate
-* BetterTouchTool
 * Jitouch
-* TouchSwitcher
 * cd to
 * [Minix ethernet driver](http://minix.com.hk/downfile/NEO_C_Ethernet_driver.zip)
 
