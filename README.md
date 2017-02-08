@@ -53,28 +53,11 @@ In System Preferences, set the following settings:
 * MacTex
 * Homebrew
 
-Install the following packages.
+Install Homebrew packages.
 
-	# Install Pythons
-	brew install python
-	brew install python3
-	brew install pypy
-	brew install pypy3
-	# Install the fish shell
-	brew install fish
-	# Install this which will allow us to copy from within tmux / tmate
-	# Without this, tmate will crash given our settings
-	brew install reattach-to-user-namespace
-	# Allow the terminal to be shared
-	brew install tmate
-	# Install text editor
-	brew install neovim
-	# Required for CtrlSF for Neovim
-	brew install ack
-	# Required for Tagbar in Neovim
-	brew install ctags
-	# A nice way to download things
-	brew install wget
+	curl -O XXX
+	brew tap homebrew/bundle
+	brew bundle
 
 * Python client for Neovim
 
