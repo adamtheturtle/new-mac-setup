@@ -71,6 +71,7 @@ Install Homebrew and its packages.
 * Messenger for Facebook
 * TextMate
 * Jitouch
+* iGlasses
 * cd to
 * [Minix ethernet driver](http://minix.com.hk/downfile/NEO_C_Ethernet_driver.zip)
 
