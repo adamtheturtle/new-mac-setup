@@ -62,8 +62,10 @@ Install Homebrew and its packages.
 
 * Python client for Neovim
 
+	```
 	pip2 install neovim
 	pip3 install neovim
+	```
 
 * [pipsi](https://github.com/mitsuhiko/pipsi)
 * Docker for Mac
