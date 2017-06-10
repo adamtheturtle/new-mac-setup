@@ -1,0 +1,5 @@
+neovim
+mypy
+flake8
+pylint
+virtualfish
