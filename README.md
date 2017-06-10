@@ -67,6 +67,12 @@ Install Homebrew and its packages.
 	pip3 install neovim
 	```
 
+* `virtualenv`:
+
+	```
+	pip3 install virtualenv
+	```
+
 * [pipsi](https://github.com/mitsuhiko/pipsi)
 * Docker for Mac
 * WhatsApp
