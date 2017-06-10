@@ -79,6 +79,10 @@ Install Homebrew and its packages.
 
 Install [fisherman](https://github.com/fisherman/fisherman)
 
+Install [virtualfish](https://github.com/adambrenecki/virtualfish):
+
+	pipsi install --python=(which python3) virtualfish
+
 And extensions for `fish`:
 
 	fisher install barnybug/docker-fish-completion
@@ -163,9 +167,9 @@ Install plugins with `:PlugInstall`.
 
 [Compile YouCompleteMe](https://github.com/Valloric/YouCompleteMe#mac-os-x) with support for C-family languages.
 
-Install Flake8 to be used in Neovim:
+Install linting tools to be used in Neovim:
 
-	pipsi install flake8
+	pipsi install --python=(which python3) flake8 mypy pylint
 
 ## Shimo
 
