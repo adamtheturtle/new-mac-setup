@@ -171,7 +171,8 @@ Install plugins with `:PlugInstall`.
 
 Install linting tools to be used in Neovim:
 
-	pipsi install --python=(which python3) flake8 mypy pylint
+	pipsi install --python=(which python3) flake8 mypy pylint yapf
+	pip3 install isort
 
 ## Shimo
 
