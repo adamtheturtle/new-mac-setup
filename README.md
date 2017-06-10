@@ -82,7 +82,7 @@ Install [fisherman](https://github.com/fisherman/fisherman)
 And extensions for `fish`:
 
 	fisher install barnybug/docker-fish-completion
-	fisher instaltl adamtheturtle/virtualfish-prompt
+	fisher install adamtheturtle/virtualfish-prompt
 
 Add `/usr/local/bin/fish` to `/etc/shells`.
 
