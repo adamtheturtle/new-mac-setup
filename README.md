@@ -48,6 +48,12 @@ In System Preferences, set the following settings:
 * Internet Accounts
 	* Sign in and enable accounts
 
+### Change Screenshot location
+
+```
+defaults write com.apple.screencapture location "/Users/Adam/Library/Mobile Documents/com~apple~CloudDocs/Screenshots"
+```
+
 ### Install software
 
 * MacTex
