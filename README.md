@@ -3,20 +3,17 @@
 * Download apps from [Get Mac Apps](getmacapps.com)
 	* Chrome
 	* Firefox
-	* Dropbox
 	* Alfred
 	* Steam
 	* VLC
 	* Spotify
 	* Transmission
-	* iTerm2
-* Sign in to Dropbox and sync desired directories
+
 * Download apps from the App Store
 
-## While waiting for iCloud and Dropbox sync
+## While waiting for iCloud sync
 
-We then wait to set up applications because iCloud and Dropbox are donwloading much of their data.
-1Password requires Dropbox and having that available helps a lot.
+We then wait to set up applications because iCloud is downloading much of their data.
 
 ### Finder
 
@@ -110,7 +107,7 @@ Add `/usr/local/bin/fish` to `/etc/shells`.
 
 ### Set up printer
 
-# After iCloud and Dropbox sync
+# After iCloud sync
 
 ## 1Password
 
@@ -135,10 +132,6 @@ Advanced > Set sync folder... `~/Dropbox/Alfred 2`
 
 Features > Clipboard
 Features > 1Password > Enable 1Password bookmarks.
-
-## iTerm2
-
-Use settings from Dropbox.
 
 ## Authy
 
