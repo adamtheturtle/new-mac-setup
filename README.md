@@ -111,7 +111,7 @@ Add `/usr/local/bin/fish` to `/etc/shells`.
 
 ## 1Password
 
-Choose the 1Password keychain in Dropbox > 1Password
+Choose to Sync with iCloud
 
 ## Safari
 
@@ -128,7 +128,7 @@ Preferences > Advanced > Tick "Show full website address"
 ## Alfred
 
 Add the Powerpack license.
-Advanced > Set sync folder... `~/Dropbox/Alfred 2`
+Advanced > Set sync folder... `/Users/Adam/Library/Mobile Documents/com~apple~CloudDocs/Alfred/Alfred.alfredpreferences`
 
 Features > Clipboard
 Features > 1Password > Enable 1Password bookmarks.
@@ -182,13 +182,13 @@ Install linting tools to be used in Neovim:
 
 ## Shimo
 
-Preferenes > Advanced > Storage > Choose Shimo directory in Dropbox.
+Preferenes > Advanced > Storage > Choose Shimo directory in iCloud Drive.
 Preferences > General > Show Shimo in "Menubar only".
 
 ### Quiver
 
-Preferences > Sync > Quiver directory in Dropbox.
+Preferences > Sync > Quiver directory in iCloud Drive.
 
 ## Gestures
 
-Install Jitouch or BetterTouchTool.
+Install Jitouch.
