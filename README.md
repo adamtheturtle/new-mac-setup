@@ -133,10 +133,6 @@ Advanced > Set sync folder... `/Users/Adam/Library/Mobile Documents/com~apple~Cl
 Features > Clipboard
 Features > 1Password > Enable 1Password bookmarks.
 
-## Authy
-
-Sign in.
-
 ## Chrome
 
 Sign in.
