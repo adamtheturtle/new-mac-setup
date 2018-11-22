@@ -84,7 +84,6 @@ Install Homebrew and its packages.
 * Jitouch
 * iGlasses
 * cd to
-* [Minix ethernet driver](http://minix.com.hk/downfile/NEO_C_Ethernet_driver.zip)
 
 ### Configure Fish shell
 
