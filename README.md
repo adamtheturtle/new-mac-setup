@@ -65,9 +65,10 @@ pip2 install neovim
 pip3 install neovim
 # virtualenv
 pip3 install virtualenv
+# pipsi
+curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python3
 ```
 
-* [pipsi](https://github.com/mitsuhiko/pipsi)
 * Docker for Mac
 * Messenger for Facebook
 * TextMate
