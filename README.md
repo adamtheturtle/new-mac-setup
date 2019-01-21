@@ -186,3 +186,7 @@ Preferences > Sync > Quiver directory in iCloud Drive.
 ## Gestures
 
 Install Jitouch.
+
+## Messages
+
+Preferences > iMessage > Enable Messages in iCloud.
