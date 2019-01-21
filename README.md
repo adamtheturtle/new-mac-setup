@@ -17,7 +17,7 @@ We then wait to set up applications because iCloud is downloading much of their 
 
 ### Finder
 
-Right click on the Desktop > Show View Options > Sort by "Name".
+Ctrl + click on the Desktop > Show View Options > Sort by "Name".
 
 ### System Preferences
 
@@ -78,7 +78,6 @@ Install Homebrew and its packages.
 
 * [pipsi](https://github.com/mitsuhiko/pipsi)
 * Docker for Mac
-* WhatsApp
 * Messenger for Facebook
 * TextMate
 * Jitouch
