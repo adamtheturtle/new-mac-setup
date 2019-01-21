@@ -77,22 +77,17 @@ pip3 install virtualenv
 
 ### Configure Fish shell
 
-Install [fisherman](https://github.com/fisherman/fisherman)
+Install [fisher](https://github.com/fisherman/fisher), [virtualfish](https://github.com/adambrenecki/virtualfish) and extensions for `fish`, and set `fish` to be the default shell:
 
-Install [virtualfish](https://github.com/adambrenecki/virtualfish):
 
-	pipsi install --python=(which python3) virtualfish
-
-And extensions for `fish`:
-
-	fisher install barnybug/docker-fish-completion
-	fisher install adamtheturtle/virtualfish-prompt
-
-Add `/usr/local/bin/fish` to `/etc/shells`.
-
-	chsh -s $(which fish)
-
-	/usr/local/opt/python/bin/pip install virtualfish
+```
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+pipsi install --python=(which python3) virtualfish
+fisher install barnybug/docker-fish-completion
+fisher install adamtheturtle/virtualfish-prompt
+chsh -s $(which fish)
+/usr/local/opt/python/bin/pip install virtualfish
+```
 
 ### Set up printer
 
