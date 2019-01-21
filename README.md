@@ -53,28 +53,19 @@ defaults write com.apple.screencapture location "/Users/Adam/Library/Mobile Docu
 
 ### Install software
 
-* MacTex
-* Homebrew
-
-Install Homebrew and its packages.
-
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/Brewfile
-	brew tap homebrew/bundle
-	brew bundle
-
-* Python client for Neovim
-
-	```
-	pip2 install neovim
-	pip3 install neovim
-	```
-
-* `virtualenv`:
-
-	```
-	pip3 install virtualenv
-	```
+```
+# Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/Brewfile
+brew tap homebrew/bundle
+brew bundle
+brew cask install mactex
+# Python client for Neovim
+pip2 install neovim
+pip3 install neovim
+# virtualenv
+pip3 install virtualenv
+```
 
 * [pipsi](https://github.com/mitsuhiko/pipsi)
 * Docker for Mac
