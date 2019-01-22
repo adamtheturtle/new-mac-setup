@@ -2,6 +2,12 @@
 
 defaults write com.apple.screencapture location "/Users/Adam/Library/Mobile Documents/com~apple~CloudDocs/Screenshots"
 
+
+# Set up git
+
+git config --global user.name "Adam Dangoor"
+git config --global user.email adamdangoor@gmail.com
+
 # Homebrew
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
