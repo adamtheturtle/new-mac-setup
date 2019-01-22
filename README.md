@@ -15,76 +15,36 @@ Ctrl + click on the Desktop > Show View Options > Sort by "Name".
 In System Preferences, set the following settings:
 
 * Keyboard
-	* Customize Control Strip
-		* Remove Siri
-		* Add Screenshot
-	* Modifier Keys
-		* Caps Lock: Escape
-			* Do this for both internal and external keyboards
-	* Text
-		* Expand `eemail` to my email
-	* Shortcuts
-		* Set Full Keyboard Access to "All controls"
-		* Spotlight
-			* Untick "Show Spotlight search"
+    * Customize Control Strip
+        * Remove Siri
+        * Add Screenshot
+    * Modifier Keys
+        * Caps Lock: Escape
+                * Do this for both internal and external keyboards
+    * Text
+        * Expand `eemail` to my email
+    * Shortcuts
+        * Set Full Keyboard Access to "All controls"
+        * Spotlight
+                * Untick "Show Spotlight search"
 * Dock
-	* Tick "Automatically hide and show the dock"
-	* Untick "Magnification"
-	* Position on screen: Left
+    * Tick "Automatically hide and show the dock"
+    * Untick "Magnification"
+    * Position on screen: Left
 * Trackpad
-	* Tap to click
+    * Tap to click
 * Internet Accounts
-	* Sign in and enable accounts
-
-### Change Screenshot location
-
-```
-defaults write com.apple.screencapture location "/Users/Adam/Library/Mobile Documents/com~apple~CloudDocs/Screenshots"
-```
+    * Sign in and enable accounts
+* Sound
+    * Show volume in menubar
 
 ### Install software
 
+Start automated setup:
+
 ```bash
-# Homebrew
-
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/Brewfile
-brew tap homebrew/bundle
-brew bundle
-
-# Python client for Neovim
-pip2 install neovim
-pip3 install neovim
-
-# virtualenv
-pip3 install virtualenv
-
-# pipsi
-curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python3
-
-# Install [fisher](https://github.com/fisherman/fisher),
-# [virtualfish](https://github.com/adambrenecki/virtualfish) and extensions for `fish`,
-# and set `fish` to be the default shell:
-
-echo $(which fish) | sudo tee -a /etc/shells
-chsh -s $(which fish)
-curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
-fish
-fisher add barnybug/docker-fish-completion
-fisher add adamtheturtle/virtual-fish-prompt
-pip3 install virtualfish
-eval (python3 -m virtualfish)
-
-# Set Terminal theme
-
-curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/iTerm%202.terminal
-
-# Set up configuration for multiple applications
-
-cd ~/Documents
-git clone git@github.com:adamtheturtle/dotfiles.git
-cd dotfiles
-./makesymlinks.sh
+curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/setup.sh
+bash setup.sh
 ```
 
 * iGlasses (private download link in email)
@@ -104,13 +64,13 @@ Choose to Sync with iCloud
 
 Install Safari extensions:
 
-	* Grammarly
-		* Set the language to American English
-	* 1Password
-	* RES
-	* 1Blocker
+* Grammarly
+    * Set the language to American English
+* 1Password
+* RES
+* 1Blocker
 
-Preferences > Advanced > Tick "Show full website address"
+Preferences > Advanced > Tick "Show full website address".
 
 ## Alfred
 
