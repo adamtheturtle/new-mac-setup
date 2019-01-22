@@ -32,7 +32,6 @@ curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | pyt
 echo $(which fish) | sudo tee -a /etc/shells
 chsh -s $(which fish)
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
-fish
 fisher add barnybug/docker-fish-completion
 fisher add adamtheturtle/virtual-fish-prompt
 pip3 install virtualfish
