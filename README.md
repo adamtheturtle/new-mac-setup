@@ -104,11 +104,6 @@ In Latexian > Preferences > Preview set the folder for TeX installation to the p
 
 Move SSH Keys from `SSH Keys` from 1Password to `~/.ssh`.
 
-## Dotfiles
-
-Clone dotfiles and move them into place.
-
-	
 ## Neovim
 
 Install [vim-plug](https://github.com/junegunn/vim-plug#installation).
