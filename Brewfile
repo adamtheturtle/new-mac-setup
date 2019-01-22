@@ -40,4 +40,4 @@ cask 'jitouch'
 cask 'caprine'
 cask '1password'
 cask 'shimo'
-
+cask 'zoomus'
