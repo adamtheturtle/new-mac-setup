@@ -26,3 +26,6 @@ tap 'homebrew/cask'
 cask 'firefox'
 cask 'google-chrome'
 cask 'mactex'
+cask 'virtualbox'
+cask 'alfred'
+
