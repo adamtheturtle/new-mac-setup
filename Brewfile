@@ -36,4 +36,5 @@ cask 'textmate'
 cask 'docker'
 cask 'jitouch'
 cask 'caprine'
+cask '1password'
 
