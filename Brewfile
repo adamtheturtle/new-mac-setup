@@ -22,3 +22,7 @@ brew 'wget'
 brew 'npm'
 # CLI for GitHub
 brew 'hub'
+tap 'homebrew/cask'
+cask 'firefox'
+cask 'google-chrome'
+cask 'mactex'
