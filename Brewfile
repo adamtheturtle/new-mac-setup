@@ -28,4 +28,6 @@ cask 'google-chrome'
 cask 'mactex'
 cask 'virtualbox'
 cask 'alfred'
-
+cask 'steam'
+cask 'vlc'
+cask 'transmission'
