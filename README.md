@@ -50,7 +50,6 @@ defaults write com.apple.screencapture location "/Users/Adam/Library/Mobile Docu
 curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/Brewfile
 brew tap homebrew/bundle
 brew bundle
-brew cask install mactex
 # Python client for Neovim
 pip2 install neovim
 pip3 install neovim
