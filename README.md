@@ -61,7 +61,6 @@ curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | pyt
 
 * Docker for Mac
 * Messenger for Facebook
-* TextMate
 * Jitouch
 * iGlasses
 * cd to
