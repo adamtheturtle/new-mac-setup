@@ -44,30 +44,28 @@ defaults write com.apple.screencapture location "/Users/Adam/Library/Mobile Docu
 
 ### Install software
 
-```
+```bash
 # Homebrew
+
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/Brewfile
 brew tap homebrew/bundle
 brew bundle
+
 # Python client for Neovim
 pip2 install neovim
 pip3 install neovim
+
 # virtualenv
 pip3 install virtualenv
+
 # pipsi
 curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python3
-```
 
-* iGlasses (private download link in email)
-* cd to
+# Install [fisher](https://github.com/fisherman/fisher),
+# [virtualfish](https://github.com/adambrenecki/virtualfish) and extensions for `fish`,
+# and set `fish` to be the default shell:
 
-### Configure Fish shell
-
-Install [fisher](https://github.com/fisherman/fisher), [virtualfish](https://github.com/adambrenecki/virtualfish) and extensions for `fish`, and set `fish` to be the default shell:
-
-
-```
 echo $(which fish) | sudo tee -a /etc/shells
 chsh -s $(which fish)
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
@@ -76,9 +74,23 @@ fisher add barnybug/docker-fish-completion
 fisher add adamtheturtle/virtual-fish-prompt
 pip3 install virtualfish
 eval (python3 -m virtualfish)
+
 # Set Terminal theme
-https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/iTerm%202.terminal
+
+curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/iTerm%202.terminal
+
+# Set up configuration for multiple applications
+
+cd ~/Documents
+git clone git@github.com:adamtheturtle/dotfiles.git
+cd dotfiles
+./makesymlinks.sh
 ```
+
+* iGlasses (private download link in email)
+* cd to
+* Backblaze (`open "/usr/local/Caskroom/backblaze/latest/Backblaze Installer.app"`)
+
 
 ### Set up printer
 
@@ -120,7 +132,9 @@ Connect to Hue.
 
 Run the following in the terminal:
 
-	which pdftex
+```bash
+which pdftex
+```
 
 This will show a path.
 
@@ -134,10 +148,6 @@ Move SSH Keys from `SSH Keys` from 1Password to `~/.ssh`.
 
 Clone dotfiles and move them into place.
 
-	cd ~/Documents
-	git clone git@github.com:adamtheturtle/dotfiles.git
-	cd dotfiles
-	./makesymlinks.sh
 	
 ## Neovim
 
@@ -148,8 +158,10 @@ Install plugins with `:PlugInstall`.
 
 Install linting tools to be used in Neovim:
 
-	pipsi install --python=(which python3) flake8 mypy pylint yapf
-	pip3 install isort
+```fish
+pipsi install --python=(which python3) flake8 mypy pylint yapf
+pip3 install isort
+```
 
 ## Shimo
 
