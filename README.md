@@ -1,12 +1,6 @@
 # New Mac setup
 
-* Download apps from [Get Mac Apps](getmacapps.com)
-	* Steam
-	* VLC
-	* Spotify
-	* Transmission
-
-* Download apps from the App Store
+## Download apps from the App Store
 
 ## While waiting for iCloud sync
 
