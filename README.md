@@ -59,9 +59,6 @@ pip3 install virtualenv
 curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python3
 ```
 
-* Docker for Mac
-* Messenger for Facebook
-* Jitouch
 * iGlasses
 * cd to
 
