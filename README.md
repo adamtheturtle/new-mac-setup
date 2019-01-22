@@ -1,9 +1,6 @@
 # New Mac setup
 
 * Download apps from [Get Mac Apps](getmacapps.com)
-	* Chrome
-	* Firefox
-	* Alfred
 	* Steam
 	* VLC
 	* Spotify
