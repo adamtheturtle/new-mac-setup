@@ -35,3 +35,5 @@ cask 'vagrant'
 cask 'textmate'
 cask 'docker'
 cask 'jitouch'
+cask 'caprine'
+
