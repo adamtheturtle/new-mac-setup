@@ -72,12 +72,14 @@ Install [fisher](https://github.com/fisherman/fisher), [virtualfish](https://git
 
 
 ```
-curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
-pipsi install --python=(which python3) virtualfish
-fisher install barnybug/docker-fish-completion
-fisher install adamtheturtle/virtualfish-prompt
+echo $(which fish) | sudo tee -a /etc/shells
 chsh -s $(which fish)
-/usr/local/opt/python/bin/pip install virtualfish
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+fish
+fisher add barnybug/docker-fish-completion
+fisher add adamtheturtle/virtual-fish-prompt
+pip3 install virtualfish
+eval (python3 -m virtualfish)
 ```
 
 ### Set up printer
