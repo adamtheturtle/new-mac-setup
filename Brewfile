@@ -14,6 +14,8 @@ brew 'tmate'
 brew 'neovim'
 # Required for CtrlSF for Neovim
 brew 'ack'
+# Required to compile YCM
+brew 'cmake'
 # Required for Tagbar in Neovim
 brew 'ctags'
 # A nice way to download things
@@ -38,6 +40,4 @@ cask 'jitouch'
 cask 'caprine'
 cask '1password'
 cask 'shimo'
-
-40
 
