@@ -59,7 +59,7 @@ pip3 install virtualenv
 curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python3
 ```
 
-* iGlasses
+* iGlasses (private download link in email)
 * cd to
 
 ### Configure Fish shell
