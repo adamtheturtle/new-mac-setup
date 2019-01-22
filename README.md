@@ -76,6 +76,8 @@ fisher add barnybug/docker-fish-completion
 fisher add adamtheturtle/virtual-fish-prompt
 pip3 install virtualfish
 eval (python3 -m virtualfish)
+# Set Terminal theme
+https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/iTerm%202.terminal
 ```
 
 ### Set up printer
