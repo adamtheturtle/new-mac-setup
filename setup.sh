@@ -92,3 +92,14 @@ mas install 775737590 # iA Writer (5.2.1)
 mas install 409183694 # Keynote (8.3)
 mas install 897118787 # Shazam (2.1)
 mas install 1107421413 # 1Blocker (1.4.5)
+
+
+# Install [vim-plug](https://github.com/junegunn/vim-plug#installation)
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# Install vim plugins with `:PlugInstall`.
+vim -c PlugInstall --headless
+# [Compile YouCompleteMe](https://github.com/Valloric/YouCompleteMe#mac-os-x)
+# with support for C-family languages.
+cd ~/.config/nvim/plug/YouCompleteMe/
+python3 install.py --clang-completer

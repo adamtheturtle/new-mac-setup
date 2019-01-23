@@ -103,20 +103,6 @@ In Latexian > Preferences > Preview set the folder for TeX installation to the p
 
 Move SSH Keys from `SSH Keys` from 1Password to `~/.ssh`.
 
-## Neovim
-
-Install [vim-plug](https://github.com/junegunn/vim-plug#installation).
-Install plugins with `:PlugInstall`.
-
-[Compile YouCompleteMe](https://github.com/Valloric/YouCompleteMe#mac-os-x) with support for C-family languages.
-
-Install linting tools to be used in Neovim:
-
-```fish
-pipsi install --python=(which python3) flake8 mypy pylint yapf
-pip3 install isort
-```
-
 ## Shimo
 
 Preferenes > Advanced > Storage > Choose Shimo directory in iCloud Drive.
