@@ -1,3 +1,5 @@
+set -euxo pipefail
+
 # Change screenshot location
 
 defaults write com.apple.screencapture location "/Users/Adam/Library/Mobile Documents/com~apple~CloudDocs/Screenshots"
