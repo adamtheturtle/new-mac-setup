@@ -48,6 +48,6 @@ rm -rf iTerm2.terminal
 # Set up configuration for multiple applications
 
 cd ~/Documents
-git clone git@github.com:adamtheturtle/dotfiles.git
+git clone https://github.com/adamtheturtle/dotfiles.git
 cd dotfiles
 ./makesymlinks.sh
