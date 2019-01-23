@@ -104,4 +104,5 @@ nvim +PlugInstall +qall --headless
 # [Compile YouCompleteMe](https://github.com/Valloric/YouCompleteMe#mac-os-x)
 # with support for C-family languages.
 cd ~/.config/nvim/plug/YouCompleteMe/
+git submodule update --init --recursive
 python3 install.py --clang-completer
