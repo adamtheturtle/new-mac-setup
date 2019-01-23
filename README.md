@@ -10,6 +10,10 @@ We then wait to set up applications because iCloud is downloading much of their 
 
 Ctrl + click on the Desktop > Show View Options > Sort by "Name".
 
+## Messages
+
+Preferences > iMessage > Enable Messages in iCloud.
+
 ### System Preferences
 
 In System Preferences, set the following settings:
@@ -38,7 +42,7 @@ In System Preferences, set the following settings:
 * Sound
     * Show volume in menubar
 
-### Install software
+### Install and configure software
 
 Start automated setup:
 
@@ -47,12 +51,11 @@ curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/set
 bash setup.sh
 ```
 
-* iGlasses (private download link in email)
+* Install iGlasses (private download link in email)
 * cd to
 * Backblaze (`open "/usr/local/Caskroom/backblaze/latest/Backblaze Installer.app"`)
-
-
-### Set up printer
+* Terminal > Preferences > Profiles > Set iTerm2 as Default theme
+* Set up printer
 
 # After iCloud sync
 
@@ -79,10 +82,6 @@ Advanced > Set sync folder... `/Users/Adam/Library/Mobile Documents/com~apple~Cl
 
 Features > Clipboard
 Features > 1Password > Enable 1Password bookmarks.
-
-## Chrome
-
-Sign in.
 
 ## Chroma
 
@@ -130,7 +129,3 @@ Preferences > Sync > Quiver directory in iCloud Drive.
 ## Gestures
 
 Install Jitouch.
-
-## Messages
-
-Preferences > iMessage > Enable Messages in iCloud.
