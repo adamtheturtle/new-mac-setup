@@ -98,7 +98,7 @@ mas install 1107421413 # 1Blocker (1.4.5)
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # Install vim plugins with `:PlugInstall`.
-vim +PlugInstall +qall --headless
+nvim +PlugInstall +qall --headless
 # [Compile YouCompleteMe](https://github.com/Valloric/YouCompleteMe#mac-os-x)
 # with support for C-family languages.
 cd ~/.config/nvim/plug/YouCompleteMe/
