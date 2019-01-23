@@ -11,8 +11,10 @@ git config --global user.name "Adam Dangoor"
 git config --global user.email adamdangoor@gmail.com
 
 # Homebrew
+# --------
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# Pass in /dev/null so we do not have a prompt
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
 curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/Brewfile
 brew tap homebrew/bundle
 brew bundle
