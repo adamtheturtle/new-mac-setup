@@ -107,3 +107,5 @@ nvim +PlugInstall +qall --headless
 cd ~/.config/nvim/plug/YouCompleteMe/
 git submodule update --init --recursive
 python3 install.py --clang-completer
+
+git config --global push.default current
