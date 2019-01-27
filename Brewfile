@@ -24,6 +24,7 @@ brew 'wget'
 brew 'npm'
 # CLI for GitHub
 brew 'hub'
+brew 'fzf'
 # Install mac app store apps
 brew 'mas'
 tap 'homebrew/cask'

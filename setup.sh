@@ -95,6 +95,7 @@ mas install 409183694 # Keynote (8.3)
 mas install 897118787 # Shazam (2.1)
 mas install 1107421413 # 1Blocker (1.4.5)
 
+/usr/local/opt/fzf/install --all
 
 # Install [vim-plug](https://github.com/junegunn/vim-plug#installation)
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
