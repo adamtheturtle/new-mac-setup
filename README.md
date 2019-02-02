@@ -28,6 +28,8 @@ In System Preferences, set the following settings:
     * Sign in and enable accounts
 * Sound
     * Show volume in menubar
+* Date and Time
+    * Clock > Show date
 
 
 ## Install and configure software
