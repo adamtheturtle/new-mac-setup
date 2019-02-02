@@ -92,7 +92,3 @@ Preferences > General > Show Shimo in "Menubar only".
 ### Quiver
 
 Preferences > Sync > Quiver directory in iCloud Drive.
-
-## Gestures
-
-Install Jitouch.
