@@ -55,7 +55,9 @@ Ctrl + click on the Desktop > Show View Options > Sort by "Name".
 
 Preferences > iMessage > Enable Messages in iCloud.
 
-## After iCloud sync
+### Calendar
+
+Choose to Sync with iCloud.
 
 ### 1Password
 
@@ -72,6 +74,17 @@ Install Safari extensions:
 
 Preferences > Advanced > Tick "Show full website address".
 
+### SSH Keys
+
+Move SSH Keys from `SSH Keys` from 1Password to `~/.ssh`.
+
+### Calendar
+
+Preferences > General > Untick "Show Birthdays calendar".
+Preferences > Accounts > Enable accounts.
+
+## After iCloud Drive download complete
+
 ### Alfred
 
 Add the Powerpack license.
@@ -79,10 +92,6 @@ Advanced > Set sync folder... `/Users/Adam/Library/Mobile Documents/com~apple~Cl
 
 Features > Clipboard
 Features > 1Password > Enable 1Password bookmarks.
-
-### SSH Keys
-
-Move SSH Keys from `SSH Keys` from 1Password to `~/.ssh`.
 
 ### Shimo
 
