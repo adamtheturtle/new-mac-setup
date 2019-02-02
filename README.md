@@ -13,13 +13,11 @@ In System Preferences, set the following settings:
         * Add Screenshot
     * Modifier Keys
         * Caps Lock: Escape
-                * Do this for both internal and external keyboards
     * Text
         * Expand `eemail` to my email
     * Shortcuts
         * Set Full Keyboard Access to "All controls"
-        * Spotlight
-                * Untick "Show Spotlight search"
+        * Spotlight > Untick "Show Spotlight search"
 * Dock
     * Tick "Automatically hide and show the dock"
     * Untick "Magnification"
