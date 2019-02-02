@@ -109,3 +109,6 @@ git submodule update --init --recursive
 python3 install.py --clang-completer
 
 git config --global push.default current
+
+xcode-select --install
+sudo xcodebuild -license
