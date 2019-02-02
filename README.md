@@ -30,6 +30,8 @@ In System Preferences, set the following settings:
     * Show volume in menubar
 * Date and Time
     * Clock > Show date
+* Wallet and Apple Pay
+    * Set up cards
 
 
 ## Install and configure software
