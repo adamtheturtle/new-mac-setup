@@ -28,6 +28,7 @@ brew 'fzf'
 # Install mac app store apps
 brew 'mas'
 tap 'homebrew/cask'
+cask 'backblaze'
 cask 'firefox'
 cask 'google-chrome'
 cask 'mactex'
