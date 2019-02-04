@@ -32,6 +32,8 @@ In System Preferences, set the following settings:
     * Clock > Show date
 * Wallet and Apple Pay
     * Set up cards
+* Bluetooth
+    * Show bluetooth in menubar
 
 
 ## Install and configure software
