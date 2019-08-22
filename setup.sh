@@ -26,6 +26,8 @@ pip3 install neovim
 
 # virtualenv
 pip3 install virtualenv
+# Without this, you get asked the first time you make a virtualenv
+mkdir -p ~/.virtualenvs
 
 # pipsi
 if ! test -x "$(which pipsi)"; then
