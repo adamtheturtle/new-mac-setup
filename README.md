@@ -47,7 +47,6 @@ bash setup.sh
 
 * Install iGlasses (private download link in email)
 * cd to
-* Backblaze (`open "/usr/local/Caskroom/backblaze/latest/Backblaze Installer.app"`)
 * Terminal > Preferences > Profiles > Set iTerm2 as Default theme
 * Set up printer
 
