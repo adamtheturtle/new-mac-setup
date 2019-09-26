@@ -29,11 +29,6 @@ pip3 install virtualenv
 # Without this, you get asked the first time you make a virtualenv
 mkdir -p ~/.virtualenvs
 
-# pipsi
-if ! test -x "$(which pipsi)"; then
-    curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python3
-fi
-
 # Install [fisher](https://github.com/fisherman/fisher),
 # [virtualfish](https://github.com/adambrenecki/virtualfish) and extensions for `fish`,
 # and set `fish` to be the default shell:
@@ -59,7 +54,6 @@ cd dotfiles
 ./makesymlinks.sh
 
 mas install 904280696 # Things3 (3.8)
-mas install 403388562 # Transmit (4.4.13)
 mas install 430255202 # Mactracker (7.7.7)
 mas install 1153157709 # Speedtest (1.5)
 mas install 931657367 # Calcbot (1.0.7)
