@@ -46,3 +46,5 @@ cask '1password'
 cask 'shimo'
 cask 'zoomus'
 cask 'signal'
+cask 'transmit'
+
