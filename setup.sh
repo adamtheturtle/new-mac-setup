@@ -101,11 +101,6 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # Install vim plugins with `:PlugInstall`.
 nvim +PlugInstall +qall --headless
-# [Compile YouCompleteMe](https://github.com/Valloric/YouCompleteMe#mac-os-x)
-# with support for C-family languages.
-cd ~/.config/nvim/plug/YouCompleteMe/
-git submodule update --init --recursive
-python3 install.py --clang-completer
 
 git config --global push.default current
 
