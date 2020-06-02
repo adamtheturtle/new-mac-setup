@@ -101,6 +101,10 @@ Preferences > Advanced > Tick "Show full website address".
 
 * Preferences > Untick "Show Heart Icon in 1Blocker Button".
 
+### TextMate
+
+* Preferences > Bundles > reStructuredText, YAML, Vagrant
+
 ### SSH Keys
 
 Move SSH Keys from `SSH Keys` from 1Password to `~/.ssh`.
