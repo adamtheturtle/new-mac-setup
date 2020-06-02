@@ -79,6 +79,10 @@ mas install 409183694 # Keynote (8.3)
 mas install 897118787 # Shazam (2.1)
 mas install 1107421413 # 1Blocker (1.4.5)
 mas install 1480068668 # Facebook Messenger (53.5.117)
+mas install 1513574319 # Glance (1.2.0)
+mas install 1508508401 # InView (1.0)
+mas install 1499215709 # Pasteboard Viewer (1.3.0)
+mas install 1499181666 # OwlOCR (3.3)
 
 /usr/local/opt/fzf/install --all
 
