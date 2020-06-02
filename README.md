@@ -50,8 +50,12 @@ bash setup.sh
 
 * Install iGlasses (private download link in email)
 * cd to
-* Terminal > Preferences > Profiles > Set iTerm2 as Default theme
 * Set up printer
+
+### Terminal
+
+* Preferences > Profiles > Set iTerm2 as Default theme
+* View > Hide Marks
 
 ### Finder
 
