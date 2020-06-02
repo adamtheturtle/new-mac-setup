@@ -147,7 +147,7 @@ Preferences > Advanced > Tick "Show full website address".
 * Add the Powerpack license.
 * Advanced > Set sync folder... `/Users/Adam/Library/Mobile Documents/com~apple~CloudDocs/Alfred/Alfred.alfredpreferences`
 * General > Request Permissions (grant permissions)
-* Features > Clipboard
+* Features > Clipboard > Keep history
 * Features > 1Password > Enable 1Password bookmarks.
 * Features > Web Bookmarks > Enable Safari Bookmarks.
 
