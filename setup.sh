@@ -4,9 +4,12 @@ set -euxo pipefail
 
 defaults write com.apple.screencapture location "/Users/Adam/Library/Mobile Documents/com~apple~CloudDocs/Screenshots"
 
+xcode-select --install
+sudo xcodebuild -license
 
 # Set up git
 
+git config --global push.default current
 git config --global user.name "Adam Dangoor"
 git config --global user.email adamdangoor@gmail.com
 
@@ -103,7 +106,3 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 # Install vim plugins with `:PlugInstall`.
 nvim +PlugInstall +qall --headless
 
-git config --global push.default current
-
-xcode-select --install
-sudo xcodebuild -license
