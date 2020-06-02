@@ -24,6 +24,7 @@ In System Preferences, set the following settings:
     * Tick "Automatically hide and show the dock"
     * Untick "Magnification"
     * Position on screen: Left
+    * Untick "Show recent applications in Dock"
 * Trackpad
     * Tap to click
 * Internet Accounts
