@@ -55,7 +55,13 @@ bash setup.sh
 
 ### Finder
 
-Ctrl + click on the Desktop > Show View Options > Sort by "Name".
+* Ctrl + click on the Desktop > Show View Options > Sort by "Name".
+* View > Show Path Bar.
+* View > Show Status Bar.
+
+### Mail
+
+View > Show Mailbox List.
 
 ### Messages
 
