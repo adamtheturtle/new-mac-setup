@@ -97,6 +97,10 @@ Install Safari extensions:
 
 Preferences > Advanced > Tick "Show full website address".
 
+### 1Blocker
+
+* Preferences > Untick "Show Heart Icon in 1Blocker Button".
+
 ### SSH Keys
 
 Move SSH Keys from `SSH Keys` from 1Password to `~/.ssh`.
