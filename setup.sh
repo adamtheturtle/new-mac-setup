@@ -15,7 +15,6 @@ brew bundle
 rm -rf Brewfile
 
 # Python client for Neovim
-pip2 install neovim
 pip3 install neovim
 
 # virtualenv
