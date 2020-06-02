@@ -93,6 +93,7 @@ mas install 775737590 # iA Writer (5.2.1)
 mas install 409183694 # Keynote (8.3)
 mas install 897118787 # Shazam (2.1)
 mas install 1107421413 # 1Blocker (1.4.5)
+mas install 1480068668 # Facebook Messenger (53.5.117)
 
 /usr/local/opt/fzf/install --all
 
