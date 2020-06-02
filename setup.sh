@@ -16,6 +16,7 @@ rm -rf Brewfile
 
 # Python client for Neovim
 pip3 install neovim
+pip3 install python-language-server  # Needed for semantic Python suggestions for TabNine
 
 # virtualenv
 pip3 install virtualenv
