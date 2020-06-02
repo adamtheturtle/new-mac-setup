@@ -96,16 +96,15 @@ Move SSH Keys from `SSH Keys` from 1Password to `~/.ssh`.
 
 ### Alfred
 
-Add the Powerpack license.
-Advanced > Set sync folder... `/Users/Adam/Library/Mobile Documents/com~apple~CloudDocs/Alfred/Alfred.alfredpreferences`
-
-Features > Clipboard
-Features > 1Password > Enable 1Password bookmarks.
+* Add the Powerpack license.
+* Advanced > Set sync folder... `/Users/Adam/Library/Mobile Documents/com~apple~CloudDocs/Alfred/Alfred.alfredpreferences`
+* Features > Clipboard
+* Features > 1Password > Enable 1Password bookmarks.
 
 ### Shimo
 
-Preferences > Advanced > Storage > Choose Shimo directory in iCloud Drive.
-Preferences > General > Show Shimo in "Menubar only".
+* Preferences > Advanced > Storage > Choose Shimo directory in iCloud Drive.
+* Preferences > General > Show Shimo in "Menubar only".
 
 ### Quiver
 
