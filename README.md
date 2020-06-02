@@ -14,7 +14,7 @@ In System Preferences, set the following settings:
         * Remove Siri
         * Add Screenshot
     * Modifier Keys
-        * Caps Lock: Escape
+        * Caps Lock: Escape (also do this for a connected external keyboard)
     * Text
         * Expand `eemail` to my email
     * Shortcuts
@@ -27,6 +27,8 @@ In System Preferences, set the following settings:
     * Untick "Show recent applications in Dock"
 * Trackpad
     * Tap to click
+* Mouse (needs mouse connected)
+    * Secondary click
 * Internet Accounts
     * Sign in and enable accounts
 * Sound
