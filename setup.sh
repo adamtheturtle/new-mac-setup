@@ -34,6 +34,7 @@ chsh -s $(which fish)
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 fish -c 'fisher add barnybug/docker-fish-completion'
 pip3 install virtualfish
+vf install
 
 # Set Terminal theme
 
