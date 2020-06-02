@@ -51,6 +51,10 @@ bash setup.sh
 * Install iGlasses (private download link in email)
 * Set up printer
 
+### Popclip
+
+Enable and launch at startup.
+
 ### Google Backup and Sync
 
 Set this up.
