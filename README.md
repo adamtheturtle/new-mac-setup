@@ -107,7 +107,8 @@ Preferences > Advanced > Tick "Show full website address".
 
 ### SSH Keys
 
-Move SSH Keys from `SSH Keys` from 1Password to `~/.ssh`.
+* Move SSH Keys from `SSH Keys` from 1Password to `~/.ssh`.
+* `ssh-add ~/.ssh/id_rsa` (use password from 1Password).
 
 ## After iCloud Drive download complete
 
