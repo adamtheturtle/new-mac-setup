@@ -65,6 +65,7 @@ Set this up.
 * Preferences > Profiles > Set iTerm2 as Default theme
 * View > Hide Marks
 * Open `vim` and type `TabNine::config`.
+* Open `vim` again and type `TabNine::sem`.
 
 ### Finder
 
