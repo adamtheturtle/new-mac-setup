@@ -1,12 +1,14 @@
 # New Mac setup
 
+## About This Mac
+
 ## System Preferences
 
 In System Preferences, set the following settings:
 
-* iCloud
-    * Sign in
-    * iCloud Drive > Options > Turn off Optimise Mac Storage
+* Apple ID
+    * iCloud
+    * Turn off Optimise Mac Storage
 * Keyboard
     * Customize Control Strip
         * Remove Siri
