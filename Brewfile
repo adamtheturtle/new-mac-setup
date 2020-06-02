@@ -1,5 +1,4 @@
 # Pythons
-brew 'python2'
 brew 'python3'
 brew 'pypy'
 brew 'pypy3'
