@@ -111,6 +111,14 @@ Preferences > Advanced > Tick "Show full website address".
 
 * Preferences > Bundles > reStructuredText, YAML, Vagrant
 
+### Reeder
+
+* Preferences > General > App Icon > Don't display Unread Count.
+* Preferences > Accounts > Add Feedbin
+* Preferences > Reading > Article Viewer > Open links in default browser.
+* Preferences > Reading > Web Browser > Open links in background.
+* View > Group items by feed.
+
 ### SSH Keys
 
 * Move SSH Keys from `SSH Keys` from 1Password to `~/.ssh`.
