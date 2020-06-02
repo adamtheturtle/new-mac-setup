@@ -49,7 +49,6 @@ bash setup.sh
 ```
 
 * Install iGlasses (private download link in email)
-* cd to
 * Set up printer
 
 ### Google Backup and Sync
@@ -67,6 +66,7 @@ Set this up.
 * Ctrl + click on the Desktop > Show View Options > Sort by "Name".
 * View > Show Path Bar.
 * View > Show Status Bar.
+* Move "cd to" from Applications to the toolbar.
 
 ### Mail
 
