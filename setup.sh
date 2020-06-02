@@ -4,15 +4,6 @@ set -euxo pipefail
 
 defaults write com.apple.screencapture location "/Users/Adam/Library/Mobile Documents/com~apple~CloudDocs/Screenshots"
 
-xcode-select --install
-sudo xcodebuild -license
-
-# Set up git
-
-git config --global push.default current
-git config --global user.name "Adam Dangoor"
-git config --global user.email adamdangoor@gmail.com
-
 # Homebrew
 # --------
 
@@ -50,14 +41,6 @@ pip3 install virtualfish
 curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/iTerm2.terminal
 open iTerm2.terminal
 rm -rf iTerm2.terminal
-
-# Set up configuration for multiple applications
-
-cd ~/Documents
-rm -rf dotfiles
-git clone https://github.com/adamtheturtle/dotfiles.git
-cd dotfiles
-./makesymlinks.sh
 
 mas install 904280696 # Things3 (3.8)
 mas install 430255202 # Mactracker (7.7.7)
@@ -106,3 +89,19 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 # Install vim plugins with `:PlugInstall`.
 nvim +PlugInstall +qall --headless
 
+xcode-select --install
+sudo xcodebuild -license
+
+# Set up git
+
+git config --global push.default current
+git config --global user.name "Adam Dangoor"
+git config --global user.email adamdangoor@gmail.com
+
+# Set up configuration for multiple applications
+
+cd ~/Documents
+rm -rf dotfiles
+git clone https://github.com/adamtheturtle/dotfiles.git
+cd dotfiles
+./makesymlinks.sh
