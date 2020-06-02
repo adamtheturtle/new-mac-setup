@@ -52,6 +52,10 @@ bash setup.sh
 * cd to
 * Set up printer
 
+### Google Backup and Sync
+
+Set this up.
+
 ### Terminal
 
 * Preferences > Profiles > Set iTerm2 as Default theme
