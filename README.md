@@ -121,6 +121,18 @@ Preferences > Advanced > Tick "Show full website address".
 * Preferences > Reading > Web Browser > Open links in background.
 * View > Group items by feed.
 
+### Slack
+
+* Log in to all workspaces.
+
+### Things
+
+* Enable Things Cloud.
+
+### Clear
+
+* Enable iCloud.
+
 ### SSH Keys
 
 * Move SSH Keys from `SSH Keys` from 1Password to `~/.ssh`.
