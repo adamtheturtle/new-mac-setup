@@ -62,7 +62,9 @@ Preferences > iMessage > Enable Messages in iCloud.
 
 ### Calendar
 
-Choose to Sync with iCloud.
+* Choose to Sync with iCloud.
+* Preferences > General > Untick "Show Birthdays calendar".
+* Preferences > Accounts > Enable accounts.
 
 ### 1Password
 
@@ -82,11 +84,6 @@ Preferences > Advanced > Tick "Show full website address".
 ### SSH Keys
 
 Move SSH Keys from `SSH Keys` from 1Password to `~/.ssh`.
-
-### Calendar
-
-Preferences > General > Untick "Show Birthdays calendar".
-Preferences > Accounts > Enable accounts.
 
 ## After iCloud Drive download complete
 
