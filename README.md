@@ -29,6 +29,7 @@ In System Preferences, set the following settings:
     * Tap to click
 * Mouse (needs mouse connected)
     * Secondary click
+    * More Gestures > Swipe between pages
 * Internet Accounts
     * Sign in and enable accounts
 * Sound
