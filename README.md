@@ -114,7 +114,9 @@ Preferences > Advanced > Tick "Show full website address".
 
 ### TextMate
 
-* Preferences > Bundles > reStructuredText, YAML, Vagrant
+* Preferences > Bundles > reStructuredText, YAML, Vagrant.
+* View > Wrap Column > 80.
+* View > Show Wrap Column.
 
 ### Reeder
 
