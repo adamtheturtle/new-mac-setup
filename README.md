@@ -92,6 +92,7 @@ Preferences > iMessage > Enable Messages in iCloud.
 * Choose to Sync with iCloud.
 * Preferences > General > Untick "Show Birthdays calendar".
 * Preferences > Accounts > Enable accounts.
+* Preferences > Advanced > Turn on timezone support.
 
 ### 1Password
 
