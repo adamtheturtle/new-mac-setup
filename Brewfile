@@ -27,6 +27,7 @@ brew 'fzf'
 brew 'rg'
 brew 'cloc'
 brew 'shellcheck'
+brew 'enchant'
 # Install mac app store apps
 brew 'mas'
 tap 'homebrew/cask'
