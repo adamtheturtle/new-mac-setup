@@ -25,6 +25,8 @@ brew 'npm'
 brew 'hub'
 brew 'fzf'
 brew 'rg'
+brew 'cloc'
+brew 'shellcheck'
 # Install mac app store apps
 brew 'mas'
 tap 'homebrew/cask'
