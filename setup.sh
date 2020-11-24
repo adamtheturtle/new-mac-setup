@@ -46,12 +46,6 @@ rm -rf iTerm2.terminal
 
 /usr/local/opt/fzf/install --all
 
-# Install [vim-plug](https://github.com/junegunn/vim-plug#installation)
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-# Install vim plugins with `:PlugInstall`.
-nvim +PlugInstall +qall --headless
-
 xcode-select --install
 sudo xcodebuild -license
 
@@ -68,3 +62,9 @@ rm -rf dotfiles
 git clone https://github.com/adamtheturtle/dotfiles.git
 cd dotfiles
 ./makesymlinks.sh
+
+# Install [vim-plug](https://github.com/junegunn/vim-plug#installation)
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# Install vim plugins with `:PlugInstall`.
+nvim +PlugInstall +qall --headless
