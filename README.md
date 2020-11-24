@@ -144,6 +144,10 @@ Preferences > Advanced > Tick "Show full website address".
 
 * Set up text message forwarding.
 
+### Slapdash
+
+* Install and set up [Slapdash](https://slapdash.com/home).
+
 ## After iCloud Drive download complete
 
 ### Alfred
