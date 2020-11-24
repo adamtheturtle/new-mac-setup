@@ -10,7 +10,7 @@ In System Preferences, set the following settings:
     * iCloud
     * Turn off Optimise Mac Storage
 * Keyboard
-    * Customize Control Strip
+    * Customize Control Strip (if there is a touchbar)
         * Remove Siri
         * Add Screenshot
     * Modifier Keys
@@ -18,7 +18,7 @@ In System Preferences, set the following settings:
     * Text
         * Expand `eemail` to my email
     * Shortcuts
-        * Set Full Keyboard Access to "All controls"
+        * Select "Use keyboard navigation to move focus between controls"
         * Spotlight > Untick "Show Spotlight search"
 * Dock
     * Tick "Automatically hide and show the dock"
