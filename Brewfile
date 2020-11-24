@@ -21,8 +21,9 @@ brew 'ctags'
 brew 'wget'
 # Package manager for Node.js
 brew 'npm'
-# CLI for GitHub
+# CLIs for GitHub
 brew 'hub'
+brew 'gh'
 brew 'fzf'
 brew 'rg'
 brew 'cloc'
