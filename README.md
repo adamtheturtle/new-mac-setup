@@ -154,6 +154,7 @@ Preferences > Advanced > Tick "Show full website address".
 * Features > Clipboard > Keep history
 * Features > 1Password > Enable 1Password bookmarks.
 * Features > Web Bookmarks > Enable Safari Bookmarks.
+* [Set up the Google Drive workflow](https://github.com/azai91/alfred-drive-workflow/issues/69#issuecomment-599150203)
 
 ### Shimo
 
