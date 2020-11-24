@@ -60,8 +60,7 @@ mas "Mactracker", id: 430255202
 mas "Speedtest", id: 1153157709
 mas "Calcbot", id: 931657367
 mas "Kaleidoscope", id: 587512244
-mas "Reeder", id: 880001334
-mas "Reeder", id: 682658836
+mas "Reeder 5", id: 1529448980
 mas "Xcode", id: 497799835
 mas "WhatsApp", id: 1147396723
 mas "Tweetbot", id: 1384080005
