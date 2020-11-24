@@ -140,6 +140,10 @@ Preferences > Advanced > Tick "Show full website address".
 * Move SSH Keys from `SSH Keys` from 1Password to `~/.ssh`.
 * `ssh-add ~/.ssh/id_rsa` (use password from 1Password).
 
+### iPhone
+
+* Set up text message forwarding.
+
 ## After iCloud Drive download complete
 
 ### Alfred
