@@ -117,11 +117,11 @@ Preferences > Advanced > Tick "Show full website address".
 
 ### Reeder
 
+* Preferences > Accounts > Add Feedbin.
 * Preferences > General > App Icon > Don't display Unread Count.
-* Preferences > Accounts > Add Feedbin
-* Preferences > Reading > Article Viewer > Open links in default browser.
-* Preferences > Reading > Web Browser > Open links in background.
-* View > Group items by feed.
+* Preferences > General > Open links in default browser.
+* Preferences > General > Open links in background.
+* Preferences > General > Group items by feed.
 
 ### Slack
 
