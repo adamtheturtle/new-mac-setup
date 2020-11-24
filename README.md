@@ -76,8 +76,8 @@ Set this up.
 * View > Show Path Bar.
 * View > Show Status Bar.
 * Move "cd to" from Applications to the toolbar.
-* Add "/Users/<user>" to the Finder sidebar.
-* Preferences > General > New Finder windows show: "<user>"
+* Add `/Users/<user>` to the Finder sidebar.
+* Preferences > General > New Finder windows show: `<user>`
 
 ### Mail
 
