@@ -20,11 +20,14 @@ In System Preferences, set the following settings:
     * Shortcuts
         * Select "Use keyboard navigation to move focus between controls"
         * Spotlight > Untick "Show Spotlight search"
-* Dock
+* Dock & Menubar
     * Tick "Automatically hide and show the dock"
     * Untick "Magnification"
     * Position on screen: Left
     * Untick "Show recent applications in Dock"
+    * Clock > Show date
+    * Sound > Show in menubar always
+    * Bluetooth > Show in menubar
 * Trackpad
     * Tap to click
 * Mouse (needs mouse connected)
@@ -32,15 +35,8 @@ In System Preferences, set the following settings:
     * More Gestures > Swipe between pages
 * Internet Accounts
     * Sign in and enable accounts
-* Sound
-    * Show volume in menubar
-* Date and Time
-    * Clock > Show date
 * Wallet and Apple Pay
     * Set up cards
-* Bluetooth
-    * Show bluetooth in menubar
-
 
 ## Install and configure software
 
