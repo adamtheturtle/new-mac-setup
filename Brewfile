@@ -30,6 +30,7 @@ brew 'rg'
 brew 'cloc'
 brew 'shellcheck'
 brew 'enchant'
+brew 'rbenv'
 
 tap 'homebrew/cask'
 cask 'firefox'
