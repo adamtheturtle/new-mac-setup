@@ -8,7 +8,7 @@ defaults write com.apple.screencapture location "/Users/Adam/Library/Mobile Docu
 # --------
 
 # Pass in /dev/null so we do not have a prompt
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null
 curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/Brewfile
 brew tap homebrew/bundle
 brew bundle
