@@ -44,7 +44,7 @@ curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/iTe
 open iTerm2.terminal
 rm -rf iTerm2.terminal
 
-/usr/local/opt/fzf/install --all
+/opt/homebrew/opt/fzf/install --all
 
 xcode-select --install
 sudo xcodebuild -license
