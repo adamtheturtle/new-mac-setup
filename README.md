@@ -94,8 +94,6 @@ Choose to Sync with iCloud.
 
 Install Safari extensions:
 
-* Grammarly
-    * Set the language to American English
 * 1Password
 * 1Blocker
 
