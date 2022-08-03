@@ -22,9 +22,9 @@ In System Preferences, set the following settings:
     * Untick "Magnification"
     * Position on screen: Left
     * Untick "Show recent applications in Dock"
-    * Clock > Show date
-    * Sound > Show in menubar always
-    * Bluetooth > Show in menubar
+* Clock > Show date
+* Sound > Show in menubar always
+* Bluetooth > Show in menubar
 * Trackpad
     * Tap to click
 * Mouse (needs mouse connected)
