@@ -10,9 +10,6 @@ In System Preferences, set the following settings:
     * iCloud
     * Turn off Optimise Mac Storage
 * Keyboard
-    * Customize Control Strip (if there is a touchbar)
-        * Remove Siri
-        * Add Screenshot
     * Modifier Keys
         * Caps Lock: Escape (also do this for a connected external keyboard)
     * Text
