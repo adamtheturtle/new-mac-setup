@@ -48,6 +48,10 @@ bash setup.sh
 * Install iGlasses (private download link in email)
 * Set up printer
 
+### Craft
+
+* Pin at least one space
+
 ### Popclip
 
 Enable and launch at startup.
