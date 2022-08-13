@@ -104,6 +104,7 @@ Install Safari extensions:
 * 1Blocker
 
 Preferences > Advanced > Tick "Show full website address".
+Preferences > Advanced > Tick "Show Develop in menubar".
 
 ### 1Blocker
 
