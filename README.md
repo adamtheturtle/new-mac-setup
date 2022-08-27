@@ -17,6 +17,7 @@ In System Preferences, set the following settings:
     * Shortcuts
         * Select "Use keyboard navigation to move focus between controls"
         * Spotlight > Untick "Show Spotlight search"
+        * Turn off Mission Control shortcuts
 * Dock & Menubar
     * Tick "Automatically hide and show the dock"
     * Untick "Magnification"
