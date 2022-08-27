@@ -63,6 +63,7 @@ cd ~/Documents
 rm -rf dotfiles
 git clone https://github.com/adamtheturtle/dotfiles.git
 cd dotfiles
+git remote set-url origin git@github.com:adamtheturtle/dotfiles.git
 ./makesymlinks.sh
 
 # Install [vim-plug](https://github.com/junegunn/vim-plug#installation)
