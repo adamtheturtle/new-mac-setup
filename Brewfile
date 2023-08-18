@@ -90,7 +90,7 @@ mas "Skitch", id: 425955336
 mas "iA Writer", id: 775737590
 mas "Keynote", id: 409183694
 mas "Shazam", id: 897118787
-mas "1Blocker", id: 1107421413
+mas "1Blocker", id: 1365531024
 mas "Facebook Messenger", id: 1480068668
 mas "Glance", id: 1513574319
 mas "InView", id: 1508508401
