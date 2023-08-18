@@ -55,7 +55,6 @@ cask 'soulver'
 cask 'coderunner'
 cask 'plex'
 cask 'plexamp'
-cask 'texpad'
 
 # Install mac app store apps
 brew 'mas'
