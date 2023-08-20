@@ -32,7 +32,6 @@ brew 'cloc'
 brew 'shellcheck'
 brew 'enchant'
 brew 'rbenv'
-brew 'adoptopenjdk12'
 
 tap 'homebrew/cask'
 cask 'firefox'
