@@ -61,15 +61,12 @@ brew 'mas'
 mas "Things3", id: 904280696
 mas "Mactracker", id: 430255202
 mas "Speedtest", id: 1153157709
-mas "Calcbot", id: 931657367
 mas "Kaleidoscope", id: 587512244
 mas "Reeder 5", id: 1529448980
 mas "Xcode", id: 497799835
 mas "WhatsApp", id: 1147396723
-mas "Tweetbot", id: 1384080005
 mas "Deliveries", id: 924726344
 mas "Clear", id: 504544917
-mas "Textual", id: 403012667
 mas "Telegram Desktop", id: 946399090
 mas "Paprika Recipe Manager 3", id: 1303222628
 mas "PopClip", id: 445189367
@@ -77,12 +74,10 @@ mas "Name Mangler 3", id: 603637384
 mas "Pages", id: 409201541
 mas "Slack", id: 803453959
 mas "SofaPlay", id: 566429668
-mas "Downcast", id: 668429425
 mas "StopTheMadness", id: 1376402589
 mas "Postico", id: 1031280567
 mas "DaisyDisk", id: 411643860
 mas "Gemini 2", id: 1090488118
-mas "Evernote", id: 406056744
 mas "iMovie", id: 408981434
 mas "Numbers", id: 409203825
 mas "Quiver", id: 866773894
@@ -94,12 +89,10 @@ mas "1Blocker", id: 1365531024
 mas "Facebook Messenger", id: 1480068668
 mas "Glance", id: 1513574319
 mas "InView", id: 1508508401
-mas "Pasteboard Viewer", id: 1499215709
 mas "OwlOCR", id: 1499181666
 mas "PoolsideFM", id: 1514817810
 mas "LG Screen Manager", id: 1142051783
 mas "Deliveries", id: 290986013
-mas "F5Access", id: 1243219105
 mas "OwlOCR", id: 1499181666
 mas "HP", id: 1474276998
 mas "Craft", id: 1487937127
