@@ -135,6 +135,10 @@ Preferences > Advanced > Tick "Show Develop in menubar".
 
 * Install and set up [Slapdash](https://slapdash.com/home).
 
+### WhatsApp
+
+* Link device
+
 ## After iCloud Drive download complete
 
 ### Alfred
