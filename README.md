@@ -50,6 +50,10 @@ bash setup.sh
 * Install iGlasses (private download link in email)
 * Set up printer
 
+### Notification Center
+
+* Pin Reminders
+
 ### Craft
 
 * Pin at least one space
