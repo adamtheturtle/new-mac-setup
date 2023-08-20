@@ -61,7 +61,6 @@ brew 'mas'
 mas "Things3", id: 904280696
 mas "Mactracker", id: 430255202
 mas "Speedtest", id: 1153157709
-mas "Kaleidoscope", id: 587512244
 mas "Reeder 5", id: 1529448980
 mas "Xcode", id: 497799835
 mas "WhatsApp", id: 1147396723
