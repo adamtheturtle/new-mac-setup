@@ -55,14 +55,6 @@ bash setup.sh
 * Pin at least one space
 * Install Power Tools https://www.craft.do/s/OhmDYXrBwI2wZS/b/1761ADC6-8860-4476-B73C-92A87C9CF364/Craft_Power_Tools
 
-### Popclip
-
-Enable and launch at startup.
-
-### Google Backup and Sync
-
-Set this up.
-
 ### Terminal
 
 * Preferences > Profiles > Set iTerm2 as Default theme
