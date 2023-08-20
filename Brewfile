@@ -98,3 +98,4 @@ mas "HP", id: 1474276998
 mas "Craft", id: 1487937127
 mas "Soulver", id: 1508732804
 mas "1Password for Safari", id: 1569813296
+mas "Clockify", id: 1364502317
