@@ -32,6 +32,8 @@ brew 'cloc'
 brew 'shellcheck'
 brew 'enchant'
 brew 'rbenv'
+# Node 16 is needed for Copilot for nvim
+brew 'node@16'
 
 cask 'firefox'
 cask 'google-chrome'
