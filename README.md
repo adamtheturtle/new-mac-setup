@@ -8,12 +8,12 @@ In System Preferences, set the following settings:
 
 * Apple ID
     * iCloud
-    * Turn off Optimise Mac Storage
+        * Turn off Optimise Mac Storage
 * Keyboard
     * Modifier Keys
         * Caps Lock: Escape (also do this for a connected external keyboard)
     * Text
-        * Expand `eemail` to my email
+        * Expand `eemail` to my email (maybe done automatically by iCloud)
     * Shortcuts
         * Select "Use keyboard navigation to move focus between controls"
         * Spotlight > Untick "Show Spotlight search"
@@ -81,7 +81,7 @@ Set this up.
 
 ### Mail
 
-View > Show Mailbox List.
+View > Show sidebar.
 
 ### Messages
 
