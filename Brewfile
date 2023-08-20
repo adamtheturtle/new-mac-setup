@@ -33,7 +33,6 @@ brew 'shellcheck'
 brew 'enchant'
 brew 'rbenv'
 
-tap 'homebrew/cask'
 cask 'firefox'
 cask 'google-chrome'
 cask 'mactex'
