@@ -58,6 +58,7 @@ cask 'soulver'
 cask 'coderunner'
 cask 'plex'
 cask 'plexamp'
+cask 'visual-studio-code'
 
 # Install mac app store apps
 brew 'mas'
