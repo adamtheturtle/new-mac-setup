@@ -122,10 +122,6 @@ Preferences > Advanced > Tick "Show Develop in menubar".
 * Preferences > General > Open links in background.
 * Preferences > General > Group items by feed.
 
-### Slack
-
-* Log in to all workspaces.
-
 ### SSH Keys
 
 * Move SSH Keys from `SSH Keys` from 1Password to `~/.ssh`.
@@ -135,13 +131,21 @@ Preferences > Advanced > Tick "Show Develop in menubar".
 
 * Set up text message forwarding.
 
+### VSCode
+
+* Turn on Settings sync
+* Install extensions:
+    * `ruff`
+    * `python`
+
 ### Slapdash
 
 * Install and set up [Slapdash](https://slapdash.com/home).
 
-### WhatsApp
+### Logins
 
-* Link device
+* Open every app in 'Applications', and log in / link devices
+    * Start with WhatsApp, Slack
 
 ## After iCloud Drive download complete
 
