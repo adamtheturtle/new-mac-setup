@@ -92,7 +92,10 @@ Preferences > iMessage > Enable Messages in iCloud.
 
 ### 1Password
 
-Choose to Sync with iCloud.
+* Choose to Sync with iCloud.
+* Preferences > General > Format secure notes using Markdown
+* Preferences > Developer > Use the SSH agent
+* Preferences > Developer > Connect with 1Password CLI
 
 ### Safari
 
