@@ -37,6 +37,7 @@ echo $(which fish) | sudo tee -a /etc/shells
 chsh -s $(which fish)
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 fish -c 'fisher install barnybug/docker-fish-completion'
+fish -c 'fisher install adamtheturtle/virtualfish-prompt'
 pip3 install virtualfish
 vf install
 
