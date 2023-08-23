@@ -140,6 +140,8 @@ Preferences > Advanced > Tick "Show Develop in menubar".
 * Install extensions:
     * `ruff`
     * `python`
+    * `vim`
+    * Copilot
 
 ### Slapdash
 
