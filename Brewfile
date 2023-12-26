@@ -24,6 +24,7 @@ brew 'npm'
 # CLIs for GitHub
 brew 'hub'
 brew 'gh'
+brew 'gpg'
 brew 'fzf'
 brew 'tree'
 brew 'ag'
