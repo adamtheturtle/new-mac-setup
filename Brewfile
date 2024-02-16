@@ -37,6 +37,7 @@ brew 'rbenv'
 brew 'node@16'
 # 1Password CLI is needed for 1Password Alfred integration
 brew '1password-cli'
+brew 'pipx'
 brew 'pyenv'
 
 cask 'firefox'

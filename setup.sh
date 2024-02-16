@@ -26,9 +26,6 @@ pip3 install virtualenv
 # Without this, you get asked the first time you make a virtualenv
 mkdir -p ~/.virtualenvs
 
-# Install pipx
-pip3 install pipx
-
 # Install [fisher](https://github.com/fisherman/fisher),
 # [virtualfish](https://github.com/adambrenecki/virtualfish) and extensions for `fish`,
 # and set `fish` to be the default shell:
