@@ -39,6 +39,7 @@ brew 'node@16'
 brew '1password-cli'
 brew 'pipx'
 brew 'pyenv'
+brew 'uv'
 
 cask 'firefox'
 cask 'google-chrome'
