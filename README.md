@@ -143,10 +143,6 @@ Preferences > Advanced > Tick "Show Develop in menubar".
     * `vim`
     * Copilot
 
-### Slapdash
-
-* Install and set up [Slapdash](https://slapdash.com/home).
-
 ### Logins
 
 * Open every app in 'Applications', and log in / link devices
