@@ -57,7 +57,7 @@ bash setup.sh
 ### Craft
 
 * Pin at least one space
-* Install Power Tools https://www.craft.do/s/OhmDYXrBwI2wZS/b/1761ADC6-8860-4476-B73C-92A87C9CF364/Craft_Power_Tools
+* Install [Power Tools](https://www.craft.do/s/OhmDYXrBwI2wZS/b/1761ADC6-8860-4476-B73C-92A87C9CF364/Craft_Power_Tools)
 
 ### Terminal
 
