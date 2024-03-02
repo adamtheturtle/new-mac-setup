@@ -89,6 +89,7 @@ Preferences > iMessage > Enable Messages in iCloud.
 * Preferences > General > Untick "Show Birthdays calendar".
 * Preferences > Accounts > Enable accounts.
 * Preferences > Advanced > Turn on timezone support.
+* Subscribe to Inview calendar.
 
 ### 1Password
 
