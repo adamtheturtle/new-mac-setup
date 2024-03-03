@@ -40,6 +40,7 @@ brew '1password-cli'
 brew 'pipx'
 brew 'pyenv'
 brew 'uv'
+brew 'git-lfs'
 
 cask 'firefox'
 cask 'google-chrome'
