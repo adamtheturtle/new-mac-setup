@@ -17,12 +17,12 @@ brew bundle
 rm -rf Brewfile
 
 # Python client for Neovim
-pip3 install neovim
+uv pip install --system neovim
 # Needed for semantic Python suggestions for TabNine
-pip3 install python-language-server
+uv pip install --system python-language-server
 
 # virtualenv
-pip3 install virtualenv
+uv pip install --system virtualenv
 # Without this, you get asked the first time you make a virtualenv
 mkdir -p ~/.virtualenvs
 
@@ -35,7 +35,7 @@ chsh -s $(which fish)
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 fish -c 'fisher install barnybug/docker-fish-completion'
 fish -c 'fisher install adamtheturtle/virtualfish-prompt'
-pip3 install virtualfish
+uv pip install --system virtualfish
 vf install
 
 # Set Terminal theme
