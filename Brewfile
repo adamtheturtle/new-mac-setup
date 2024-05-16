@@ -82,7 +82,7 @@ mas "Name Mangler 3", id: 603637384
 mas "Pages", id: 409201541
 mas "Slack", id: 803453959
 mas "SofaPlay", id: 566429668
-mas "StopTheMadness", id: 1376402589
+mas "StopTheMadness Pro", id: 6471380298
 mas "Postico", id: 1031280567
 mas "DaisyDisk", id: 411643860
 mas "Gemini 2", id: 1090488118
