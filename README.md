@@ -135,6 +135,10 @@ Preferences > Advanced > Tick "Show Develop in menubar".
 
 * Set up text message forwarding.
 
+### CodeRunner
+
+For Python, change "Run Settings..." > "Run command" to "uv run $filename"
+
 ### VSCode
 
 * Turn on Settings sync
