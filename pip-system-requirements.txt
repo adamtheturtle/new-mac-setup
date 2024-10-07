@@ -1,6 +1,0 @@
-# Python client for Neovim
-neovim
-# Needed for semantic Python suggestions for TabNine
-python-language-server
-virtualenv
-virtualfish
