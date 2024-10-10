@@ -169,7 +169,3 @@ For Python, change "Run Settings..." > "Run command" to "uv run $filename"
 
 * Preferences > Advanced > Storage > Choose Shimo directory in iCloud Drive.
 * Preferences > General > Show Shimo in "Menubar only".
-
-### Quiver
-
-Preferences > Sync > Quiver directory in iCloud Drive.
