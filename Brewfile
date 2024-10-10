@@ -72,7 +72,6 @@ mas "Reeder 5", id: 1529448980
 mas "Xcode", id: 497799835
 mas "WhatsApp", id: 1147396723
 mas "Deliveries", id: 924726344
-mas "Clear", id: 504544917
 mas "Telegram Desktop", id: 946399090
 mas "Paprika Recipe Manager 3", id: 1303222628
 mas "PopClip", id: 445189367
@@ -86,7 +85,6 @@ mas "DaisyDisk", id: 411643860
 mas "Gemini 2", id: 1090488118
 mas "iMovie", id: 408981434
 mas "Numbers", id: 409203825
-mas "Quiver", id: 866773894
 mas "Skitch", id: 425955336
 mas "iA Writer", id: 775737590
 mas "Keynote", id: 409183694
