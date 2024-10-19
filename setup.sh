@@ -19,11 +19,6 @@ uv pip install --system neovim
 # Needed for semantic Python suggestions for TabNine
 uv pip install --system python-language-server
 
-# virtualenv
-uv pip install --system virtualenv
-# Without this, you get asked the first time you make a virtualenv
-mkdir -p ~/.virtualenvs
-
 # Install [fisher](https://github.com/fisherman/fisher),
 # [virtualfish](https://github.com/adambrenecki/virtualfish) and extensions for `fish`,
 # and set `fish` to be the default shell:
