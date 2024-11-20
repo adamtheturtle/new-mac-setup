@@ -105,3 +105,4 @@ mas "1Password for Safari", id: 1569813296
 mas "Clockify", id: 1364502317
 mas "Paprika", id: 451907568
 mas "Overcast", id: 888422857
+mas "Tampermonkey", id: 6738342400
