@@ -17,6 +17,8 @@ def main():
 		"vws-web-tools",  #
 		"vws-cli",
 		"vws-python-mock",
+		"sphinx-confluencebuilder-bridge",
+		"sphinx-notionbuilder",
 	]
 	fetch_args = ["git", "fetch", "origin"]
 	checkout_master_args = ["git", "checkout", "main"]
