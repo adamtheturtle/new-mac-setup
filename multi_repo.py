@@ -7,7 +7,7 @@ def main():
 	base_dir = Path("/Users/adam/Documents/repositories/")
 	subdir_names = [
 		"sybil-extras",
-		"docrun",
+		"doccmd",
 		"doccmd-pre-commit", #
 		"requests-mock-flask",  #
 		"sphinx-substitution-extensions",
