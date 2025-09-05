@@ -10,6 +10,7 @@ def main():
 		"doccmd",
 		"doccmd-pre-commit", #
 		"requests-mock-flask",  #
+		"mypy-strict-kwargs",
 		"sphinx-substitution-extensions",
 		"vws-auth-tools",
 		"vws-python",
