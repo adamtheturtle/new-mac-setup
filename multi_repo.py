@@ -18,6 +18,7 @@ def main():
 		"vws-web-tools",  #
 		"vws-cli",
 		"vws-python-mock",
+		"sphinx-combine",
 		"sphinx-confluencebuilder-bridge",
 		"sphinx-notionbuilder",
 	]
