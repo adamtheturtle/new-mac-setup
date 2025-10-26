@@ -33,8 +33,6 @@ brew 'cloc'
 brew 'shellcheck'
 brew 'enchant'
 brew 'rbenv'
-# Node 16 is needed for Copilot for nvim
-brew 'node@16'
 # 1Password CLI is needed for 1Password Alfred integration
 brew '1password-cli'
 brew 'uv'
