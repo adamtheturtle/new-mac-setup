@@ -33,11 +33,11 @@ brew 'cloc'
 brew 'shellcheck'
 brew 'enchant'
 brew 'rbenv'
-# 1Password CLI is needed for 1Password Alfred integration
-brew '1password-cli'
 brew 'uv'
 brew 'git-lfs'
 
+# 1Password CLI is needed for 1Password Alfred integration
+cask '1password-cli'
 cask 'firefox'
 cask 'google-chrome'
 cask 'mactex'
