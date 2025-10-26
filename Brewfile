@@ -85,7 +85,6 @@ mas "iA Writer", id: 775737590
 mas "Keynote", id: 409183694
 mas "Shazam", id: 897118787
 mas "1Blocker", id: 1365531024
-mas "Facebook Messenger", id: 1480068668
 mas "Glance", id: 1564688210
 mas "InView", id: 1508508401
 mas "OwlOCR", id: 6462355119
