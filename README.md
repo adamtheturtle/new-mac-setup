@@ -148,6 +148,11 @@ For Python, change "Run Settings..." > "Run command" to "uv run $filename"
     * `vim`
     * Copilot
 
+### Zed
+
+* Install Claude Code
+* Set Accept Edits as the default mode for Claude Code (cmd + select it)
+
 ### Logins
 
 * Open every app in 'Applications', and log in / link devices
