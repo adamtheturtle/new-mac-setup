@@ -22,12 +22,6 @@ chsh -s $(which fish)
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 fish -c 'fisher install barnybug/docker-fish-completion'
 
-# Set Terminal theme
-
-curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/iTerm2.terminal
-open iTerm2.terminal
-rm -rf iTerm2.terminal
-
 /opt/homebrew/opt/fzf/install --all
 
 xcode-select --install
