@@ -164,8 +164,3 @@ For Python, change "Run Settings..." > "Run command" to "uv run $filename"
 * Features > 1Password > Enable 1Password bookmarks.
 * Features > Web Bookmarks > Enable Safari Bookmarks.
 * [Set up the Google Drive workflow](https://github.com/azai91/alfred-drive-workflow/issues/69#issuecomment-599150203)
-
-### Shimo
-
-* Preferences > Advanced > Storage > Choose Shimo directory in iCloud Drive.
-* Preferences > General > Show Shimo in "Menubar only".
