@@ -13,11 +13,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 curl -fsSL https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/Brewfile | brew bundle --file=-
 
-# Python client for Neovim
-uv pip install --system neovim
-# Needed for semantic Python suggestions for TabNine
-uv pip install --system python-language-server
-
 # Install [fisher](https://github.com/fisherman/fisher),
 # [virtualfish](https://github.com/adambrenecki/virtualfish) and extensions for `fish`,
 # and set `fish` to be the default shell:
