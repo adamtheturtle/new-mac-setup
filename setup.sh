@@ -11,7 +11,6 @@ defaults write com.apple.screencapture location "/Users/Adam/Library/Mobile Docu
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null
 eval "$(/opt/homebrew/bin/brew shellenv)"
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
-brew tap homebrew/bundle
 curl -fsSL https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/Brewfile | brew bundle --file=-
 
 # Python client for Neovim
