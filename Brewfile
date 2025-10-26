@@ -64,7 +64,7 @@ cask 'zed'
 brew 'mas'
 mas "Mactracker", id: 430255202
 mas "Speedtest", id: 1153157709
-mas "Reeder 5", id: 1529448980
+mas "Reeder Classic", id: 1529448980
 mas "Xcode", id: 497799835
 mas "WhatsApp", id: 310633997
 mas "Deliveries", id: 924726344
