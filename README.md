@@ -56,9 +56,6 @@ bash setup.sh
 
 ### Terminal
 
-* Preferences > Profiles > Set iTerm2 as Default theme
-* View > Hide Marks
-* Open `vim` and type `:Copilot setup`, and follow instructions.
 * `gh auth login` to log in to the GitHub CLI
 
 ### Finder
