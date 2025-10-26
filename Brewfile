@@ -66,7 +66,7 @@ mas "Mactracker", id: 430255202
 mas "Speedtest", id: 1153157709
 mas "Reeder 5", id: 1529448980
 mas "Xcode", id: 497799835
-mas "WhatsApp", id: 1147396723
+mas "WhatsApp", id: 310633997
 mas "Deliveries", id: 924726344
 mas "Telegram Desktop", id: 946399090
 mas "Paprika Recipe Manager 3", id: 1303222628
