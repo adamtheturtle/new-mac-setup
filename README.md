@@ -81,7 +81,6 @@ Preferences > iMessage > Enable Messages in iCloud.
 
 ### 1Password
 
-* Choose to Sync with iCloud.
 * Preferences > General > Format secure notes using Markdown
 * Preferences > Developer > Use the SSH agent
 * Preferences > Developer > Connect with 1Password CLI
@@ -96,17 +95,13 @@ Install Safari extensions:
 Preferences > Advanced > Tick "Show full website address".
 Preferences > Advanced > Tick "Show Develop in menubar".
 
-### 1Blocker
-
-* Preferences > Untick "Show Heart Icon in 1Blocker Button".
-
 ### TextMate
 
-* Preferences > Bundles > reStructuredText, YAML, Vagrant.
+* Preferences > Bundles > reStructuredText, YAML.
 * View > Wrap Column > 80.
 * View > Show Wrap Column.
 
-### Reeder
+### Reeder Classic
 
 * Preferences > Accounts > Add Feedbin.
 * Preferences > General > App Icon > Don't display Unread Count.
