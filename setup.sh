@@ -27,6 +27,7 @@ fish -c 'fisher install barnybug/docker-fish-completion'
 xcode-select --install
 sudo xcodebuild -license
 
+gh auth login
 # Set up git
 
 git config --global push.default current
