@@ -62,6 +62,7 @@ cask 'coderunner'
 cask 'plex'
 cask 'plexamp'
 cask 'visual-studio-code'
+cask 'zed'
 
 # Install mac app store apps
 brew 'mas'
