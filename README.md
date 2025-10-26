@@ -52,12 +52,7 @@ bash setup.sh
 
 ### Notification Center
 
-* Pin Reminders
-
-### Craft
-
-* Pin at least one space
-* Install [Power Tools](https://www.craft.do/s/OhmDYXrBwI2wZS/b/1761ADC6-8860-4476-B73C-92A87C9CF364/Craft_Power_Tools)
+* Add Reminders Widgets
 
 ### Terminal
 
@@ -74,10 +69,6 @@ bash setup.sh
 * Move "cd to" from Applications to the toolbar.
 * Add `/Users/<user>` to the Finder sidebar.
 * Preferences > General > New Finder windows show: `<user>`
-
-### Mail
-
-View > Show sidebar.
 
 ### Messages
 
