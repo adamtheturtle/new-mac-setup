@@ -59,6 +59,7 @@ cask 'plex'
 cask 'plexamp'
 cask 'visual-studio-code'
 cask 'zed'
+cask 'popclip'
 
 # Install mac app store apps
 brew 'mas'
@@ -70,7 +71,6 @@ mas "WhatsApp", id: 310633997
 mas "Deliveries", id: 924726344
 mas "Telegram Desktop", id: 946399090
 mas "Paprika Recipe Manager 3", id: 1303222628
-mas "PopClip", id: 445189367
 mas "Name Mangler 3", id: 603637384
 mas "Pages", id: 409201541
 mas "Slack", id: 803453959
