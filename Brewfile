@@ -64,7 +64,6 @@ cask 'zed'
 
 # Install mac app store apps
 brew 'mas'
-mas "Things3", id: 904280696
 mas "Mactracker", id: 430255202
 mas "Speedtest", id: 1153157709
 mas "Reeder 5", id: 1529448980
