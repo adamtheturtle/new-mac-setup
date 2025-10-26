@@ -54,10 +54,6 @@ bash setup.sh
 
 * Add Reminders Widgets
 
-### Terminal
-
-* `gh auth login` to log in to the GitHub CLI
-
 ### Finder
 
 * Ctrl + click on the Desktop > Show View Options > Sort by "Name".
