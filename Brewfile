@@ -61,6 +61,7 @@ cask 'visual-studio-code'
 cask 'zed'
 cask 'popclip'
 cask 'chatgpt'
+cask 'notion'
 
 # Install mac app store apps
 brew 'mas'
