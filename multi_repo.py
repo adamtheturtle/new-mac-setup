@@ -6,12 +6,13 @@ from pathlib import Path
 def main():
 	base_dir = Path("/Users/adam/Documents/repositories/")
 	subdir_names = [
-		"sybil-extras",
+		"click-compose",
 		"doccmd",
 		"doccmd-pre-commit", #
 		"requests-mock-flask",  #
 		"mypy-strict-kwargs",
 		"sphinx-substitution-extensions",
+		"sybil-extras",
 		"vws-auth-tools",
 		"vws-python",
 		"vws-test-fixtures",  #
