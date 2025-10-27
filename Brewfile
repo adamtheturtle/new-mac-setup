@@ -62,6 +62,7 @@ cask 'zed'
 cask 'popclip'
 cask 'chatgpt'
 cask 'notion'
+cask 'privadovpn'
 
 # Install mac app store apps
 brew 'mas'
