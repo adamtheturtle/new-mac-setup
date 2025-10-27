@@ -60,6 +60,7 @@ cask 'plexamp'
 cask 'visual-studio-code'
 cask 'zed'
 cask 'popclip'
+cask 'chatgpt'
 
 # Install mac app store apps
 brew 'mas'
