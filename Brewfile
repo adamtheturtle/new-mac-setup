@@ -103,3 +103,4 @@ mas "Paprika", id: 451907568
 mas "Overcast", id: 888422857
 mas "Tampermonkey", id: 6738342400
 mas "uBlock Origin Lite", id: 6745342698
+mas "Table Tool", id: 1122008420
