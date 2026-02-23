@@ -1,0 +1,3 @@
+# Never commit secrets (see GitHub MCP setup - use 1Password)
+.env
+.mcp.json

@@ -132,6 +132,27 @@ For Python, change "Run Settings..." > "Run command" to "uv run $filename"
 * Install Claude Code
 * Set Accept Edits as the default mode for Claude Code (cmd + select it)
 
+### GitHub MCP Server (Claude Code)
+
+Enables GitHub integration (repos, issues, PRs) in Claude Code. **No secrets in this repo.**
+
+1. Create a [GitHub Personal Access Token](https://github.com/settings/personal-access-tokens/new) with `repo` and `read:org` scopes.
+2. Export the token, then run the setup script:
+
+```bash
+export GITHUB_PAT='your_token_here'
+bash <(curl -fsSL https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/scripts/setup-github-mcp.sh)
+```
+
+Or with a local clone:
+
+```bash
+export GITHUB_PAT='your_token_here'
+bash scripts/setup-github-mcp.sh
+```
+
+3. Restart Claude Code. Verify with `claude mcp list`.
+
 ### Logins
 
 * Open every app in 'Applications', and log in / link devices
