@@ -48,3 +48,6 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # Install vim plugins with `:PlugInstall`.
 nvim +PlugInstall +qall --headless
+
+# Allow XCode agents to use any tools
+defaults write com.apple.dt.Xcode IDEChatAgenticChatSkipPermissions -bool YES
