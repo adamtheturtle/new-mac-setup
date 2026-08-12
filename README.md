@@ -80,6 +80,7 @@ Preferences > iMessage > Enable Messages in iCloud.
 * Preferences > General > Format secure notes using Markdown
 * Preferences > Developer > Use the SSH agent
 * Preferences > Developer > Connect with 1Password CLI
+* Update to 1Password 8.12.32 or later, then go to Settings > Autofill > Set up macOS AutoFill > Turn On
 
 ### Safari
 
