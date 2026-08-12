@@ -2,9 +2,9 @@
 
 ## About This Mac
 
-## System Preferences
+## System Settings
 
-In System Preferences, set the following settings:
+In System Settings, set the following settings:
 
 * Apple ID
     * iCloud
@@ -61,25 +61,26 @@ bash setup.sh
 * View > Show Status Bar.
 * Move "cd to" from Applications to the toolbar.
 * Add `/Users/<user>` to the Finder sidebar.
-* Preferences > General > New Finder windows show: `<user>`
+* Settings > General > New Finder windows show: `<user>`
 
 ### Messages
 
-Preferences > iMessage > Enable Messages in iCloud.
+Settings > iMessage > Enable Messages in iCloud.
 
 ### Calendar
 
 * Choose to Sync with iCloud.
-* Preferences > General > Untick "Show Birthdays calendar".
-* Preferences > Accounts > Enable accounts.
-* Preferences > Advanced > Turn on timezone support.
+* Settings > General > Untick "Show Birthdays calendar".
+* Settings > Accounts > Enable accounts.
+* Settings > Advanced > Turn on timezone support.
 * Subscribe to Inview calendar.
 
 ### 1Password
 
-* Preferences > General > Format secure notes using Markdown
-* Preferences > Developer > Use the SSH agent
-* Preferences > Developer > Connect with 1Password CLI
+* Settings > General > Format secure notes using Markdown
+* Settings > Developer > Use the SSH agent
+* Settings > Developer > Connect with 1Password CLI
+* Settings > Autofill > Set up macOS AutoFill > Turn On
 
 ### Safari
 
@@ -88,22 +89,22 @@ Install Safari extensions:
 * 1Password
 * 1Blocker
 
-Preferences > Advanced > Tick "Show full website address".
-Preferences > Advanced > Tick "Show Develop in menubar".
+Settings > Advanced > Tick "Show full website address".
+Settings > Advanced > Tick "Show Develop in menubar".
 
 ### TextMate
 
-* Preferences > Bundles > reStructuredText, YAML.
+* Settings > Bundles > reStructuredText, YAML.
 * View > Wrap Column > 80.
 * View > Show Wrap Column.
 
 ### Reeder Classic
 
-* Preferences > Accounts > Add Feedbin.
-* Preferences > General > App Icon > Don't display Unread Count.
-* Preferences > General > Open links in default browser.
-* Preferences > General > Open links in background.
-* Preferences > General > Group items by feed.
+* Settings > Accounts > Add Feedbin.
+* Settings > General > App Icon > Don't display Unread Count.
+* Settings > General > Open links in default browser.
+* Settings > General > Open links in background.
+* Settings > General > Group items by feed.
 
 ### SSH Keys
 
