@@ -81,6 +81,13 @@ Settings > iMessage > Enable Messages in iCloud.
 * Settings > Developer > Use the SSH agent
 * Settings > Developer > Connect with 1Password CLI
 * Settings > Autofill > Set up macOS AutoFill > Turn On
+* Set up the [1Password shell plugin for GitHub](https://developer.1password.com/docs/cli/shell-plugins/github/):
+    * Create a GitHub personal access token and save it in 1Password.
+    * Run `op plugin init gh` and choose the token as the global default.
+    * Add the `source ~/.config/op/plugins.sh` command printed by `op plugin init`
+      to `~/.config/fish/config.fish`.
+    * Open a new shell and confirm that `gh auth status` succeeds after authenticating
+      with 1Password.
 
 ### Safari
 
@@ -132,6 +139,14 @@ For Python, change "Run Settings..." > "Run command" to "uv run $filename"
 
 * Install Claude Code
 * Set Accept Edits as the default mode for Claude Code (cmd + select it)
+* Install the `Cursor Theme` extension from the Extension Gallery (`cmd-shift-x`).
+* Install Astral's Claude Code plugin, which provides the `ty` Python language server
+  (and requires `uvx`, installed by the `uv` Homebrew formula):
+
+```bash
+claude plugin marketplace add astral-sh/claude-code-plugins
+claude plugin install astral@astral-sh
+```
 
 ### GitHub MCP Server (Claude Code)
 
