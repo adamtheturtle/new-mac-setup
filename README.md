@@ -43,8 +43,7 @@ Start automated setup:
 ```bash
 curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/setup.sh
 sudo echo 1 # this will cache the password
-bash setup.sh # this will stop when Xcode needs to be installed. Run it again after that:
-bash setup.sh
+bash setup.sh # this pauses while the Xcode Command Line Tools installer runs
 ```
 
 * Install iGlasses (private download link in email)

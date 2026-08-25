@@ -4,6 +4,20 @@ set -euxo pipefail
 
 defaults write com.apple.screencapture location "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Screenshots"
 
+# Xcode Command Line Tools
+# ------------------------
+
+# Homebrew needs these to build formulae, so install them before installing
+# anything with brew. `xcode-select --install` returns as soon as the GUI
+# installer opens, so wait for it to finish rather than racing brew against it.
+if ! /usr/bin/xcode-select --print-path &> /dev/null; then
+    /usr/bin/xcode-select --install
+    echo "Waiting for the Command Line Tools installer to finish..."
+    until /usr/bin/xcode-select --print-path &> /dev/null; do
+        sleep 10
+    done
+fi
+
 # Homebrew
 # --------
 
@@ -25,7 +39,6 @@ chsh -s "$fish_path"
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 fish -c 'fisher install barnybug/docker-fish-completion'
 
-xcode-select --install
 sudo xcodebuild -license
 
 gh auth login
