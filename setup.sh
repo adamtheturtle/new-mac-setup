@@ -10,7 +10,11 @@ defaults write com.apple.screencapture location "/Users/Adam/Library/Mobile Docu
 # Pass in /dev/null so we do not have a prompt
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null
 eval "$(/opt/homebrew/bin/brew shellenv)"
-/usr/sbin/softwareupdate --install-rosetta --agree-to-license
+# Rosetta only exists on Apple Silicon; on an Intel Mac this command fails and,
+# under `set -e`, takes the rest of the script with it.
+if [ "$(uname -m)" = "arm64" ]; then
+    /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+fi
 curl -fsSL https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/Brewfile | brew bundle --file=-
 
 # Install [fisher](https://github.com/fisherman/fisher),
