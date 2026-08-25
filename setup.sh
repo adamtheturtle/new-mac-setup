@@ -13,9 +13,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 curl -fsSL https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/Brewfile | brew bundle --file=-
 
-# Install [fisher](https://github.com/fisherman/fisher),
-# [virtualfish](https://github.com/adambrenecki/virtualfish) and extensions for `fish`,
-# and set `fish` to be the default shell:
+# Install [fisher](https://github.com/jorgebucaran/fisher) and the Docker
+# completions for `fish`, and set `fish` to be the default shell.
+# Python environments are managed with `uv` (from the Brewfile), so virtualfish
+# is deliberately not installed.
 
 fish_path="$(which fish)"
 # Only append once: re-running setup.sh must not grow /etc/shells.
