@@ -13,9 +13,21 @@ defaults write com.apple.screencapture location "$HOME/Library/Mobile Documents/
 if ! /usr/bin/xcode-select --print-path &> /dev/null; then
     /usr/bin/xcode-select --install
     echo "Waiting for the Command Line Tools installer to finish..."
-    until /usr/bin/xcode-select --print-path &> /dev/null; do
+    # Bounded, because a cancelled or failed installer never makes
+    # `xcode-select --print-path` succeed and an unbounded wait would sleep
+    # forever while looking like progress. 120 * 10s = 20 minutes.
+    for _ in $(seq 120); do
+        if /usr/bin/xcode-select --print-path &> /dev/null; then
+            break
+        fi
         sleep 10
     done
+    if ! /usr/bin/xcode-select --print-path &> /dev/null; then
+        echo "Command Line Tools are still not installed." >&2
+        echo "The installer was probably cancelled or failed. Install them with" >&2
+        echo "'xcode-select --install' and run this script again." >&2
+        exit 1
+    fi
 fi
 
 # Homebrew
