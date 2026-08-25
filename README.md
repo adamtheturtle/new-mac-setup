@@ -161,24 +161,32 @@ claude plugin install astral@astral-sh
 
 ### GitHub MCP Server (Claude Code)
 
-Enables GitHub integration (repos, issues, PRs) in Claude Code. **No secrets in this repo.**
+Enables GitHub integration (repos, issues, PRs) in Claude Code. **No secrets in this repo, and none on the command line.**
+
+The token stays in 1Password. Claude Code runs a helper script on each connection
+to fetch it, so it never appears in `ps` output, in shell history, or in
+`~/.claude.json`.
 
 1. Create a [GitHub Personal Access Token](https://github.com/settings/personal-access-tokens/new) with `repo` and `read:org` scopes.
-2. Export the token, then run the setup script:
+2. Save it in 1Password, then right click the field and choose "Copy Secret Reference".
+3. Run the setup script with that reference (it defaults to
+   `op://Private/GitHub PAT/token`):
 
 ```bash
-export GITHUB_PAT='your_token_here'
-bash <(curl -fsSL https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/scripts/setup-github-mcp.sh)
+GITHUB_PAT_OP_REF='op://Private/GitHub PAT/token' \
+  bash <(curl -fsSL https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/scripts/setup-github-mcp.sh)
 ```
 
 Or with a local clone:
 
 ```bash
-export GITHUB_PAT='your_token_here'
-bash scripts/setup-github-mcp.sh
+GITHUB_PAT_OP_REF='op://Private/GitHub PAT/token' bash scripts/setup-github-mcp.sh
 ```
 
-3. Restart Claude Code. Verify with `claude mcp list`.
+4. Restart Claude Code. Verify with `claude mcp list`.
+
+Requires the 1Password CLI (installed by the `Brewfile`) with "Connect with
+1Password CLI" enabled, as set up in the [1Password](#1password) section above.
 
 ### Logins
 
