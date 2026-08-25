@@ -9,7 +9,16 @@ defaults write com.apple.screencapture location "/Users/Adam/Library/Mobile Docu
 
 # Pass in /dev/null so we do not have a prompt
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Homebrew's prefix depends on the architecture: /opt/homebrew on Apple
+# Silicon, /usr/local on Intel.
+if [ -x /opt/homebrew/bin/brew ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -x /usr/local/bin/brew ]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+else
+    echo "Homebrew not found in /opt/homebrew or /usr/local" >&2
+    exit 1
+fi
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 curl -fsSL https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/Brewfile | brew bundle --file=-
 
@@ -22,7 +31,7 @@ chsh -s $(which fish)
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 fish -c 'fisher install barnybug/docker-fish-completion'
 
-/opt/homebrew/opt/fzf/install --all
+"$(brew --prefix)/opt/fzf/install" --all
 
 xcode-select --install
 sudo xcodebuild -license
