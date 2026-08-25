@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
 
+import os
 import subprocess
 from pathlib import Path
 
+# Directory holding all the checkouts. This script lives in a repository that is
+# itself checked out alongside them, so default to its parent and allow an
+# override for anyone whose layout differs.
+DEFAULT_BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 def main():
-    base_dir = Path("/Users/adam/Documents/repositories/")
+    base_dir = Path(os.environ.get("MULTI_REPO_BASE", DEFAULT_BASE_DIR))
     subdir_names = [
         "click-compose",
         "coderpad-api-mock",
@@ -58,7 +64,6 @@ def main():
     all_args = [
         fetch_args,
         checkout_master_args,
-        ["git", "reset", "--hard", "HEAD"],
         ["git", "config", "pull.rebase", "false"],
         git_pull_args,
 #       checkout_args,
@@ -71,6 +76,16 @@ def main():
     ]
     for subdir_name in subdir_names:
         subdir = base_dir / subdir_name
+        if not subdir.is_dir():
+            print(f"{subdir_name}: no checkout at {subdir}, skipping")
+            continue
+
+        # This script used to `git reset --hard HEAD`, which silently threw away
+        # uncommitted work. Skip dirty checkouts instead so nothing is lost.
+        if _is_dirty(subdir=subdir):
+            print(f"{subdir_name}: uncommitted changes, skipping")
+            continue
+
         _delete_merged_branches(subdir=subdir)
 
         for args in all_args:
@@ -79,6 +94,18 @@ def main():
             except subprocess.CalledProcessError as exc:
                 print(exc)
                 print("Exception in", subdir)
+
+
+def _is_dirty(subdir: Path) -> bool:
+    """Whether the checkout has uncommitted changes, staged or not."""
+    result = subprocess.run(
+        ["git", "status", "--porcelain"],
+        capture_output=True,
+        text=True,
+        check=True,
+        cwd=subdir,
+    )
+    return bool(result.stdout.strip())
 
 
 def _delete_merged_branches(subdir: Path) -> None:
