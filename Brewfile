@@ -53,7 +53,6 @@ cask 'shimo'
 cask 'zoom'
 cask 'signal'
 cask 'transmit'
-cask 'soulver'
 cask 'coderunner'
 cask 'plex'
 cask 'plexamp'
@@ -71,7 +70,6 @@ mas "Speedtest", id: 1153157709
 mas "Reeder Classic", id: 1529448980
 mas "Xcode", id: 497799835
 mas "WhatsApp", id: 310633997
-mas "Deliveries", id: 924726344
 mas "Telegram Desktop", id: 946399090
 mas "Paprika Recipe Manager 3", id: 1303222628
 mas "Name Mangler 3", id: 603637384
@@ -93,7 +91,6 @@ mas "InView", id: 1508508401
 mas "OwlOCR", id: 6462355119
 mas "LG Screen Manager", id: 1142051783
 mas "Deliveries", id: 290986013
-mas "OwlOCR", id: 1499181666
 mas "HP", id: 1474276998
 mas "Craft", id: 1487937127
 mas "Soulver", id: 1508732804
