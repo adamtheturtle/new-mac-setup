@@ -11,7 +11,7 @@ defaults write com.apple.screencapture location "$HOME/Library/Mobile Documents/
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null
 eval "$(/opt/homebrew/bin/brew shellenv)"
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
-curl -fsSL https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/Brewfile | brew bundle --file=-
+curl -fsSL https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/main/Brewfile | brew bundle --file=-
 
 # Install [fisher](https://github.com/jorgebucaran/fisher) and the Docker
 # completions for `fish`, and set `fish` to be the default shell.
