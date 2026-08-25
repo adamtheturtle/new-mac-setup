@@ -51,7 +51,17 @@ chsh -s "$fish_path"
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 fish -c 'fisher install barnybug/docker-fish-completion'
 
-sudo xcodebuild -license
+# `xcode-select --install` leaves the active developer directory pointing at
+# the Command Line Tools, and installing Xcode from the App Store does not
+# change it. `xcodebuild` refuses to run against a Command Line Tools instance
+# and exits 1, which would end the script here. Point it at Xcode.app first.
+if [ -d /Applications/Xcode.app ]; then
+    sudo /usr/bin/xcode-select --switch /Applications/Xcode.app/Contents/Developer
+    sudo xcodebuild -license
+else
+    echo "Xcode.app not found, skipping the licence step." >&2
+    echo "Once Xcode has installed, run 'sudo xcodebuild -license' yourself." >&2
+fi
 
 gh auth login
 # Set up git
