@@ -18,10 +18,6 @@ curl -fsSL https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/
 # Python environments are managed with `uv` (from the Brewfile), so virtualfish
 # is deliberately not installed.
 
-fish_path="$(which fish)"
-# Only append once: re-running setup.sh must not grow /etc/shells.
-grep -qxF "$fish_path" /etc/shells || echo "$fish_path" | sudo tee -a /etc/shells
-chsh -s "$fish_path"
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 fish -c 'fisher install barnybug/docker-fish-completion'
 
@@ -51,6 +47,15 @@ git pull --ff-only || echo "dotfiles: could not fast-forward, leaving the checko
 # completions into the shell config directories, so running it first means
 # those edits are replaced by the dotfiles symlinks.
 /opt/homebrew/opt/fzf/install --all
+
+# Only now that fish's configuration is symlinked into place, and fzf has added
+# its key bindings, is it safe to make fish the login shell: doing it earlier
+# leaves you logging in to a fish with no config, on a machine where the rest of
+# setup has not finished.
+fish_path="$(which fish)"
+# Only append once: re-running setup.sh must not grow /etc/shells.
+grep -qxF "$fish_path" /etc/shells || echo "$fish_path" | sudo tee -a /etc/shells
+chsh -s "$fish_path"
 
 # Install [vim-plug](https://github.com/junegunn/vim-plug#installation)
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
