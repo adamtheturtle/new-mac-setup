@@ -17,8 +17,10 @@ curl -fsSL https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/
 # [virtualfish](https://github.com/adambrenecki/virtualfish) and extensions for `fish`,
 # and set `fish` to be the default shell:
 
-echo $(which fish) | sudo tee -a /etc/shells
-chsh -s $(which fish)
+fish_path="$(which fish)"
+# Only append once: re-running setup.sh must not grow /etc/shells.
+grep -qxF "$fish_path" /etc/shells || echo "$fish_path" | sudo tee -a /etc/shells
+chsh -s "$fish_path"
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 fish -c 'fisher install barnybug/docker-fish-completion'
 
