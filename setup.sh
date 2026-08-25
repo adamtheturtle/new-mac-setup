@@ -40,12 +40,22 @@ git config --global user.email adamdangoor@gmail.com
 
 cd ~/Documents
 if [ ! -d dotfiles/.git ]; then
+    # Over HTTPS: the 1Password SSH agent is configured by hand, after this
+    # script has run, so SSH is not usable yet. A fresh clone is already up to
+    # date, so there is nothing to pull.
     git clone https://github.com/adamtheturtle/dotfiles.git
+    cd dotfiles
+else
+    cd dotfiles
+    # Never fatal: an existing checkout with local work should survive a re-run.
+    # BatchMode stops an unusable SSH setup turning into a host key prompt that
+    # blocks the script instead of failing.
+    GIT_SSH_COMMAND='ssh -o BatchMode=yes' git pull --ff-only ||
+        echo "dotfiles: could not fast-forward, leaving the checkout alone"
 fi
-cd dotfiles
+
+# For pushing later, once the 1Password SSH agent is set up.
 git remote set-url origin git@github.com:adamtheturtle/dotfiles.git
-# Never fatal: an existing checkout with local work should survive a re-run.
-git pull --ff-only || echo "dotfiles: could not fast-forward, leaving the checkout alone"
 ./makesymlinks.sh
 
 # Install [vim-plug](https://github.com/junegunn/vim-plug#installation)
