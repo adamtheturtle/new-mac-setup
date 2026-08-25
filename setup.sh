@@ -37,10 +37,13 @@ git config --global user.email adamdangoor@gmail.com
 # Set up configuration for multiple applications
 
 cd ~/Documents
-rm -rf dotfiles
-git clone https://github.com/adamtheturtle/dotfiles.git
+if [ ! -d dotfiles/.git ]; then
+    git clone https://github.com/adamtheturtle/dotfiles.git
+fi
 cd dotfiles
 git remote set-url origin git@github.com:adamtheturtle/dotfiles.git
+# Never fatal: an existing checkout with local work should survive a re-run.
+git pull --ff-only || echo "dotfiles: could not fast-forward, leaving the checkout alone"
 ./makesymlinks.sh
 
 # Install [vim-plug](https://github.com/junegunn/vim-plug#installation)
