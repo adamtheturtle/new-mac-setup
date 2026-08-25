@@ -115,8 +115,19 @@ Settings > Advanced > Tick "Show Develop in menubar".
 
 ### SSH Keys
 
-* Move SSH Keys from `SSH Keys` from 1Password to `~/.ssh`.
-* `ssh-add ~/.ssh/id_rsa` (use password from 1Password).
+Keys live in 1Password and are served by its SSH agent (enabled in the
+[1Password](#1password) section above), so no private key is copied to `~/.ssh`.
+
+* Point SSH at the 1Password agent by adding this to `~/.ssh/config`:
+
+```
+Host *
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+```
+
+* Confirm the keys are offered: `ssh-add -l` should list the keys from the
+  `SSH Keys` item, and `ssh -T git@github.com` should authenticate (approve the
+  1Password prompt).
 
 ### iPhone
 
