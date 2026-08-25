@@ -14,16 +14,22 @@ set -euo pipefail
 
 OP_REF="${GITHUB_PAT_OP_REF:-op://Private/GitHub PAT/token}"
 
-for required in claude op; do
+for required in claude op python3; do
     if ! command -v "$required" &>/dev/null; then
         echo "Error: '$required' not found." >&2
         case "$required" in
             claude) echo "Install Claude Code first (e.g. via Zed)." >&2 ;;
             op) echo "Install the 1Password CLI: brew install --cask 1password-cli" >&2 ;;
+            python3) echo "Install Python: brew install python3" >&2 ;;
         esac
         exit 1
     fi
 done
+
+# Claude Code may launch the helper from a GUI app with a PATH that has no
+# Homebrew in it, so bake in absolute paths rather than relying on lookup.
+OP_BIN="$(command -v op)"
+PYTHON_BIN="$(command -v python3)"
 
 # The reference is embedded in a generated shell script, so refuse anything that
 # would need escaping there.
@@ -55,8 +61,8 @@ cat > "$HELPER" <<HELPER_SCRIPT
 set -euo pipefail
 # python3 does the JSON encoding so that a token containing quotes or
 # backslashes still produces a valid header object.
-op read --no-newline "$OP_REF" |
-    python3 -c 'import json, sys; print(json.dumps({"Authorization": "Bearer " + sys.stdin.read()}))'
+"$OP_BIN" read --no-newline "$OP_REF" |
+    "$PYTHON_BIN" -c 'import json, sys; print(json.dumps({"Authorization": "Bearer " + sys.stdin.read()}))'
 HELPER_SCRIPT
 chmod 700 "$HELPER"
 
