@@ -60,7 +60,7 @@ bash setup.sh
 * View > Show Path Bar.
 * View > Show Status Bar.
 * Move "cd to" from Applications to the toolbar.
-* Add `/Users/<user>` to the Finder sidebar.
+* Add your home folder (`~`) to the Finder sidebar.
 * Settings > General > New Finder windows show: `<user>`
 
 ### Messages
@@ -198,7 +198,7 @@ Requires the 1Password CLI (installed by the `Brewfile`) with "Connect with
 ### Alfred
 
 * Add the Powerpack license.
-* Advanced > Set Preferences folder... `/Users/Adam/Library/Mobile Documents/com~apple~CloudDocs/Alfred/Alfred.alfredpreferences`
+* Advanced > Set Preferences folder... `~/Library/Mobile Documents/com~apple~CloudDocs/Alfred/Alfred.alfredpreferences`
 * General > Request Permissions (grant permissions)
 * Features > Clipboard > Keep history
 * Features > 1Password > Enable 1Password bookmarks.
