@@ -24,8 +24,6 @@ chsh -s "$fish_path"
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 fish -c 'fisher install barnybug/docker-fish-completion'
 
-/opt/homebrew/opt/fzf/install --all
-
 xcode-select --install
 sudo xcodebuild -license
 
@@ -47,6 +45,11 @@ git remote set-url origin git@github.com:adamtheturtle/dotfiles.git
 # Never fatal: an existing checkout with local work should survive a re-run.
 git pull --ff-only || echo "dotfiles: could not fast-forward, leaving the checkout alone"
 ./makesymlinks.sh
+
+# Run after makesymlinks.sh: the fzf installer writes its key bindings and
+# completions into the shell config directories, so running it first means
+# those edits are replaced by the dotfiles symlinks.
+/opt/homebrew/opt/fzf/install --all
 
 # Install [vim-plug](https://github.com/junegunn/vim-plug#installation)
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
