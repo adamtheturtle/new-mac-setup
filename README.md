@@ -15,22 +15,8 @@ In System Settings, set the following settings:
     * Text
         * Expand `eemail` to my email (maybe done automatically by iCloud)
     * Shortcuts
-        * Select "Use keyboard navigation to move focus between controls"
         * Spotlight > Untick "Show Spotlight search"
         * Turn off Mission Control shortcuts
-* Dock & Menubar
-    * Tick "Automatically hide and show the dock"
-    * Untick "Magnification"
-    * Position on screen: Left
-    * Untick "Show recent applications in Dock"
-* Clock > Show date
-* Sound > Show in menubar always
-* Bluetooth > Show in menubar
-* Trackpad
-    * Tap to click
-* Mouse (needs mouse connected)
-    * Secondary click
-    * More Gestures > Swipe between pages
 * Internet Accounts
     * Sign in and enable accounts
 * Wallet and Apple Pay
@@ -56,12 +42,8 @@ bash setup.sh
 
 ### Finder
 
-* Ctrl + click on the Desktop > Show View Options > Sort by "Name".
-* View > Show Path Bar.
-* View > Show Status Bar.
 * Move "cd to" from Applications to the toolbar.
 * Add your home folder (`~`) to the Finder sidebar.
-* Settings > General > New Finder windows show: `<user>`
 
 ### Messages
 
