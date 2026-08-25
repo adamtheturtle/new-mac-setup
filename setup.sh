@@ -50,13 +50,24 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.finder NewWindowTarget -string PfHm
 
-# Sort the Desktop by name. Nested inside the plist, so defaults cannot set it.
+# Sort the Desktop by name. Nested inside the plist, so defaults cannot set it
+# directly. Editing the file in place would not stick: cfprefsd has the domain
+# cached from the writes above and would serve the stale copy to Finder and
+# overwrite the edit. So round-trip the domain through defaults instead, which
+# keeps cfprefsd the only writer.
+#
 # Not fatal: on a machine that has never opened a Finder window the key path
 # does not exist yet and PlistBuddy exits 1, which would end the script here.
-/usr/libexec/PlistBuddy \
+finder_plist="$(mktemp -t com.apple.finder)"
+defaults export com.apple.finder - > "$finder_plist"
+if /usr/libexec/PlistBuddy \
     -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy name" \
-    ~/Library/Preferences/com.apple.finder.plist ||
+    "$finder_plist"; then
+    defaults import com.apple.finder "$finder_plist"
+else
     echo "Could not sort the Desktop by name; do it from Show View Options."
+fi
+rm -f "$finder_plist"
 
 # Restart the things that only read their preferences at startup.
 killall Dock
