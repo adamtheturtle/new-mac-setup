@@ -27,7 +27,14 @@ fish -c 'fisher install barnybug/docker-fish-completion'
 xcode-select --install
 sudo xcodebuild -license
 
-gh auth login
+# `gh auth login` is interactive, so it stalls an unattended run and re-prompts
+# on every re-run. Skip it when gh is already authenticated, and allow deferring
+# it entirely with SKIP_GH_AUTH=1.
+if [ -n "${SKIP_GH_AUTH:-}" ]; then
+    echo "SKIP_GH_AUTH is set: run 'gh auth login' yourself once setup finishes."
+elif ! gh auth status &> /dev/null; then
+    gh auth login
+fi
 # Set up git
 
 git config --global push.default current

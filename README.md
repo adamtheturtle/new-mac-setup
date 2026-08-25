@@ -47,6 +47,11 @@ bash setup.sh # this will stop when Xcode needs to be installed. Run it again af
 bash setup.sh
 ```
 
+`setup.sh` runs `gh auth login` unless `gh` is already authenticated. To keep the
+run unattended, set `SKIP_GH_AUTH=1` and authenticate afterwards — either with
+`gh auth login`, or through the
+[1Password shell plugin](#1password) set up below.
+
 * Install iGlasses (private download link in email)
 * Set up printer
 
