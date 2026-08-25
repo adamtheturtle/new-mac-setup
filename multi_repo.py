@@ -46,7 +46,7 @@ def main():
         "wiremock-mock",
     ]
     fetch_args = ["git", "fetch", "origin"]
-    checkout_master_args = ["git", "checkout", "main"]
+    checkout_main_args = ["git", "checkout", "main"]
     git_pull_args = ["git", "pull"]
     checkout_args = ["git", "checkout", "-b", "yaml-nextline"]
     # cp_args = ["cp", "../vws-cli/.github/workflows/dependabot-merge.yml", "./.github/workflows/dependabot-merge.yml"]
@@ -63,7 +63,7 @@ def main():
     gh_repo_view_args = ["gh", "pr", "view", "--web"]
     all_args = [
         fetch_args,
-        checkout_master_args,
+        checkout_main_args,
         ["git", "config", "pull.rebase", "false"],
         git_pull_args,
 #       checkout_args,

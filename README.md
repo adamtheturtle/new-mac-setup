@@ -41,7 +41,7 @@ In System Settings, set the following settings:
 Start automated setup:
 
 ```bash
-curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/setup.sh
+curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/main/setup.sh
 sudo echo 1 # this will cache the password
 bash setup.sh # this will stop when Xcode needs to be installed. Run it again after that:
 bash setup.sh
@@ -174,7 +174,7 @@ to fetch it, so it never appears in `ps` output, in shell history, or in
 
 ```bash
 GITHUB_PAT_OP_REF='op://Private/GitHub PAT/token' \
-  bash <(curl -fsSL https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/master/scripts/setup-github-mcp.sh)
+  bash <(curl -fsSL https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/main/scripts/setup-github-mcp.sh)
 ```
 
 Or with a local clone:
