@@ -58,12 +58,11 @@ defaults write com.apple.finder NewWindowTarget -string PfHm
     ~/Library/Preferences/com.apple.finder.plist ||
     echo "Could not sort the Desktop by name; do it from Show View Options."
 
-# Restart the things that only read their preferences at startup. Not fatal:
-# these are cosmetic, and on a fresh machine one of them may not be running yet.
-killall Dock || true
-killall Finder || true
-killall ControlCenter || true
-killall SystemUIServer || true
+# Restart the things that only read their preferences at startup.
+killall Dock
+killall Finder
+killall ControlCenter
+killall SystemUIServer
 
 # Homebrew
 # --------

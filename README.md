@@ -4,10 +4,6 @@
 
 ## System Settings
 
-`setup.sh` applies the Dock, Finder, trackpad, mouse, menu bar and keyboard
-navigation settings. Only the ones below are left, because they cannot be
-scripted.
-
 * Apple ID
     * iCloud
         * Turn off Optimise Mac Storage
@@ -54,9 +50,6 @@ bash setup.sh
 * Add Reminders Widgets
 
 ### Finder
-
-The Desktop sort order, path bar, status bar and new window target are set by
-`setup.sh`. What is left:
 
 * Move "cd to" from Applications to the toolbar.
 * Add your home folder (`~`) to the Finder sidebar. The sidebar is a binary
