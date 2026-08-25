@@ -4,6 +4,8 @@
 
 ## System Settings
 
+In System Settings, set the following settings:
+
 * Apple ID
     * iCloud
         * Turn off Optimise Mac Storage
@@ -19,17 +21,6 @@
     * Sign in and enable accounts
 * Wallet and Apple Pay
     * Set up cards
-
-Why each one stays manual:
-
-* **iCloud, Internet Accounts, Wallet** are account settings with no `defaults`
-  key behind them.
-* **Caps Lock** is per keyboard, and `hidutil` does not survive a reboot without
-  a launch agent to reapply it.
-* **Text replacement** is synced through iCloud rather than stored locally.
-* **Keyboard shortcuts** live in `com.apple.symbolichotkeys` as nested
-  dictionaries keyed by opaque numeric IDs, and only take effect after a logout.
-  Setting the wrong ID disables the wrong shortcut, so these are safer by hand.
 
 ## Install and configure software
 
@@ -52,8 +43,7 @@ bash setup.sh
 ### Finder
 
 * Move "cd to" from Applications to the toolbar.
-* Add your home folder (`~`) to the Finder sidebar. The sidebar is a binary
-  `sfl2` file rather than a preference, so this needs doing by hand.
+* Add your home folder (`~`) to the Finder sidebar.
 
 ### Messages
 
