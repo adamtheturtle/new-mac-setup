@@ -4,7 +4,9 @@
 
 ## System Settings
 
-In System Settings, set the following settings:
+`setup.sh` applies the Dock, Finder, trackpad, mouse, menu bar and keyboard
+navigation settings. Only the ones below are left, because they cannot be
+scripted.
 
 * Apple ID
     * iCloud
@@ -15,26 +17,23 @@ In System Settings, set the following settings:
     * Text
         * Expand `eemail` to my email (maybe done automatically by iCloud)
     * Shortcuts
-        * Select "Use keyboard navigation to move focus between controls"
         * Spotlight > Untick "Show Spotlight search"
         * Turn off Mission Control shortcuts
-* Dock & Menubar
-    * Tick "Automatically hide and show the dock"
-    * Untick "Magnification"
-    * Position on screen: Left
-    * Untick "Show recent applications in Dock"
-* Clock > Show date
-* Sound > Show in menubar always
-* Bluetooth > Show in menubar
-* Trackpad
-    * Tap to click
-* Mouse (needs mouse connected)
-    * Secondary click
-    * More Gestures > Swipe between pages
 * Internet Accounts
     * Sign in and enable accounts
 * Wallet and Apple Pay
     * Set up cards
+
+Why each one stays manual:
+
+* **iCloud, Internet Accounts, Wallet** are account settings with no `defaults`
+  key behind them.
+* **Caps Lock** is per keyboard, and `hidutil` does not survive a reboot without
+  a launch agent to reapply it.
+* **Text replacement** is synced through iCloud rather than stored locally.
+* **Keyboard shortcuts** live in `com.apple.symbolichotkeys` as nested
+  dictionaries keyed by opaque numeric IDs, and only take effect after a logout.
+  Setting the wrong ID disables the wrong shortcut, so these are safer by hand.
 
 ## Install and configure software
 
@@ -56,12 +55,12 @@ bash setup.sh
 
 ### Finder
 
-* Ctrl + click on the Desktop > Show View Options > Sort by "Name".
-* View > Show Path Bar.
-* View > Show Status Bar.
+The Desktop sort order, path bar, status bar and new window target are set by
+`setup.sh`. What is left:
+
 * Move "cd to" from Applications to the toolbar.
-* Add your home folder (`~`) to the Finder sidebar.
-* Settings > General > New Finder windows show: `<user>`
+* Add your home folder (`~`) to the Finder sidebar. The sidebar is a binary
+  `sfl2` file rather than a preference, so this needs doing by hand.
 
 ### Messages
 

@@ -1,8 +1,69 @@
 set -euxo pipefail
 
-# Change screenshot location
+# System Settings
+# ---------------
+
+# Settings that used to be a manual checklist in the README. Anything still
+# listed there could not be done this way: keyboard shortcuts live in
+# com.apple.symbolichotkeys, which is fiddly to write and only applies after a
+# logout, and account-level settings (iCloud, Internet Accounts, Wallet) have no
+# defaults key at all.
+#
+# Every key below was read back from a machine already configured by hand, so
+# these are the values macOS itself writes rather than remembered ones.
 
 defaults write com.apple.screencapture location "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Screenshots"
+
+# Dock: hide it, put it on the left, no magnification, no recent applications.
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock magnification -bool false
+defaults write com.apple.dock orientation -string left
+defaults write com.apple.dock show-recents -bool false
+
+# "Use keyboard navigation to move focus between controls".
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
+
+# Trackpad tap to click. Three keys: the built-in trackpad, a Bluetooth one, and
+# the global setting the Settings pane also writes.
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Mouse secondary click, and "Swipe between pages". Written for both the
+# built-in domain and the Bluetooth one so a Magic Mouse is covered whichever
+# way it is paired.
+for mouse_domain in com.apple.AppleMultitouchMouse com.apple.driver.AppleBluetoothMultitouch.mouse; do
+    defaults write "$mouse_domain" MouseButtonMode -string TwoButton
+    defaults write "$mouse_domain" MouseTwoFingerHorizSwipeGesture -int 2
+done
+
+# Menu bar: always show Sound and Bluetooth. 18 is "Always Show in Menu Bar";
+# these live in the per-host domain, not the plain one.
+defaults -currentHost write com.apple.controlcenter Sound -int 18
+defaults -currentHost write com.apple.controlcenter Bluetooth -int 18
+
+# Show the date in the menu bar clock. 1 is always, 0 is only when there is room.
+defaults write com.apple.menuextra.clock ShowDate -int 1
+
+# Finder: path bar, status bar, and new windows open at home (PfHm).
+defaults write com.apple.finder ShowPathbar -bool true
+defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder NewWindowTarget -string PfHm
+
+# Sort the Desktop by name. Nested inside the plist, so defaults cannot set it.
+# Not fatal: on a machine that has never opened a Finder window the key path
+# does not exist yet and PlistBuddy exits 1, which would end the script here.
+/usr/libexec/PlistBuddy \
+    -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy name" \
+    ~/Library/Preferences/com.apple.finder.plist ||
+    echo "Could not sort the Desktop by name; do it from Show View Options."
+
+# Restart the things that only read their preferences at startup. Not fatal:
+# these are cosmetic, and on a fresh machine one of them may not be running yet.
+killall Dock || true
+killall Finder || true
+killall ControlCenter || true
+killall SystemUIServer || true
 
 # Homebrew
 # --------
