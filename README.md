@@ -66,10 +66,8 @@ Settings > iMessage > Enable Messages in iCloud.
 * Set up the [1Password shell plugin for GitHub](https://developer.1password.com/docs/cli/shell-plugins/github/):
     * Create a GitHub personal access token and save it in 1Password.
     * Run `op plugin init gh` and choose the token as the global default.
-    * Add the `source ~/.config/op/plugins.sh` command printed by `op plugin init`
-      to `~/.config/fish/config.fish`.
-    * Open a new shell and confirm that `gh auth status` succeeds after authenticating
-      with 1Password.
+    * Add the `source ~/.config/op/plugins.sh` command printed by `op plugin init` to `~/.config/fish/config.fish`.
+    * Open a new shell and confirm that `gh auth status` succeeds after authenticating with 1Password.
 
 ### Safari
 
@@ -97,8 +95,7 @@ Settings > Advanced > Tick "Show Develop in menubar".
 
 ### SSH Keys
 
-Keys live in 1Password and are served by its SSH agent (enabled in the
-[1Password](#1password) section above), so no private key is copied to `~/.ssh`.
+Keys live in 1Password and are served by its SSH agent (enabled in the [1Password](#1password) section above), so no private key is copied to `~/.ssh`.
 
 * Point SSH at the 1Password agent by adding this to `~/.ssh/config`:
 
@@ -107,9 +104,7 @@ Host *
   IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 ```
 
-* Confirm the keys are offered: `ssh-add -l` should list the keys from the
-  `SSH Keys` item, and `ssh -T git@github.com` should authenticate (approve the
-  1Password prompt).
+* Confirm the keys are offered: `ssh-add -l` should list the keys from the `SSH Keys` item, and `ssh -T git@github.com` should authenticate (approve the 1Password prompt).
 
 ### iPhone
 
@@ -133,8 +128,7 @@ For Python, change "Run Settings..." > "Run command" to "uv run $filename"
 * Install Claude Code
 * Set Accept Edits as the default mode for Claude Code (cmd + select it)
 * Install the `Cursor Theme` extension from the Extension Gallery (`cmd-shift-x`).
-* Install Astral's Claude Code plugin, which provides the `ty` Python language server
-  (and requires `uvx`, installed by the `uv` Homebrew formula):
+* Install Astral's Claude Code plugin, which provides the `ty` Python language server (and requires `uvx`, installed by the `uv` Homebrew formula):
 
 ```bash
 claude plugin marketplace add astral-sh/claude-code-plugins
@@ -143,16 +137,15 @@ claude plugin install astral@astral-sh
 
 ### GitHub MCP Server (Claude Code)
 
-Enables GitHub integration (repos, issues, PRs) in Claude Code. **No secrets in this repo, and none on the command line.**
+Enables GitHub integration (repos, issues, PRs) in Claude Code.
+**No secrets in this repo, and none on the command line.**
 
-The token stays in 1Password. Claude Code runs a helper script on each connection
-to fetch it, so it never appears in `ps` output, in shell history, or in
-`~/.claude.json`.
+The token stays in 1Password.
+Claude Code runs a helper script on each connection to fetch it, so it never appears in `ps` output, in shell history, or in `~/.claude.json`.
 
 1. Create a [GitHub Personal Access Token](https://github.com/settings/personal-access-tokens/new) with `repo` and `read:org` scopes.
 2. Save it in 1Password, then right click the field and choose "Copy Secret Reference".
-3. Run the setup script with that reference (it defaults to
-   `op://Private/GitHub PAT/token`):
+3. Run the setup script with that reference (it defaults to `op://Private/GitHub PAT/token`):
 
 ```bash
 GITHUB_PAT_OP_REF='op://Private/GitHub PAT/token' \
@@ -165,10 +158,10 @@ Or with a local clone:
 GITHUB_PAT_OP_REF='op://Private/GitHub PAT/token' bash scripts/setup-github-mcp.sh
 ```
 
-4. Restart Claude Code. Verify with `claude mcp list`.
+4. Restart Claude Code.
+   Verify with `claude mcp list`.
 
-Requires the 1Password CLI (installed by the `Brewfile`) with "Connect with
-1Password CLI" enabled, as set up in the [1Password](#1password) section above.
+Requires the 1Password CLI (installed by the `Brewfile`) with "Connect with 1Password CLI" enabled, as set up in the [1Password](#1password) section above.
 
 ### Logins
 
