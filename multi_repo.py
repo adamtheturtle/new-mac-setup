@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
+import argparse
 import os
 import subprocess
+import sys
 from pathlib import Path
 
 # Directory holding all the checkouts. This script lives in a repository that is
@@ -10,7 +12,14 @@ from pathlib import Path
 DEFAULT_BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-def main():
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Fast-forward the default branch of each checkout.")
+    parser.add_argument(
+        "--prune-merged",
+        action="store_true",
+        help="delete local branches already merged into the remote default branch",
+    )
+    args = parser.parse_args()
     base_dir = Path(os.environ.get("MULTI_REPO_BASE", DEFAULT_BASE_DIR))
     subdir_names = [
         "click-compose",
@@ -45,106 +54,76 @@ def main():
         "vws-web-tools",
         "wiremock-mock",
     ]
-    fetch_args = ["git", "fetch", "origin"]
-    checkout_main_args = ["git", "checkout", "main"]
-    git_pull_args = ["git", "pull"]
-    checkout_args = ["git", "checkout", "-b", "yaml-nextline"]
-    # cp_args = ["cp", "../vws-cli/.github/workflows/dependabot-merge.yml", "./.github/workflows/dependabot-merge.yml"]
-    git_add_args = ["git", "add", ".github"]
-    git_commit_args = [
-        "git",
-        "commit",
-        "--no-verify",
-        "-m",
-        "Avoid zizmor warning",
-    ]
-    git_push_args = ["git", "push"]
-    gh_pr_create_args = ["gh", "pr", "create", "--fill"]
-    gh_repo_view_args = ["gh", "pr", "view", "--web"]
-    all_args = [
-        fetch_args,
-        checkout_main_args,
-        ["git", "config", "pull.rebase", "false"],
-        git_pull_args,
-#       checkout_args,
-#       ["uv", "run", "--all-extras", "pre-commit", "autoupdate"],
-#       git_add_args,
-#       git_commit_args,
-#       git_push_args,
-#       gh_pr_create_args,
-#       gh_repo_view_args,
-    ]
+    failed = False
     for subdir_name in subdir_names:
         subdir = base_dir / subdir_name
-        if not subdir.is_dir():
+        if not (subdir / ".git").exists():
             print(f"{subdir_name}: no checkout at {subdir}, skipping")
             continue
 
-        # This script used to `git reset --hard HEAD`, which silently threw away
-        # uncommitted work. Skip dirty checkouts instead so nothing is lost.
-        if _is_dirty(subdir=subdir):
-            print(f"{subdir_name}: uncommitted changes, skipping")
+        try:
+            if _git(subdir, "status", "--porcelain"):
+                print(f"{subdir_name}: uncommitted changes, skipping")
+                continue
+
+            _git(subdir, "fetch", "origin")
+            _git(subdir, "remote", "set-head", "origin", "--auto")
+            remote_branch = _git(subdir, "symbolic-ref", "--short", "refs/remotes/origin/HEAD")
+            default_branch = remote_branch.removeprefix("origin/")
+            _git(subdir, "switch", default_branch)
+            _git(subdir, "merge", "--ff-only", remote_branch)
+        except subprocess.CalledProcessError as exc:
+            _report_error(subdir, exc)
+            failed = True
             continue
 
-        _delete_merged_branches(subdir=subdir)
-
-        for args in all_args:
+        if args.prune_merged:
             try:
-                subprocess.check_output(args=args, cwd=subdir)
+                failed |= _delete_merged_branches(subdir, default_branch, remote_branch)
             except subprocess.CalledProcessError as exc:
-                print(exc)
-                print("Exception in", subdir)
+                _report_error(subdir, exc)
+                failed = True
+
+    return int(failed)
 
 
-def _is_dirty(subdir: Path) -> bool:
-    """Whether the checkout has uncommitted changes, staged or not."""
-    result = subprocess.run(
-        ["git", "status", "--porcelain"],
+def _git(subdir: Path, *args: str) -> str:
+    return subprocess.run(
+        ["git", *args],
+        cwd=subdir,
+        check=True,
         capture_output=True,
         text=True,
-        check=True,
-        cwd=subdir,
+    ).stdout.strip("\n")
+
+
+def _report_error(subdir: Path, error: subprocess.CalledProcessError) -> None:
+    message = (error.stderr or error.stdout or "").strip()
+    print(f"{subdir.name}: {error}", file=sys.stderr)
+    if message:
+        print(message, file=sys.stderr)
+
+
+def _delete_merged_branches(subdir: Path, default_branch: str, remote_branch: str) -> bool:
+    branches = _git(
+        subdir,
+        "branch",
+        "--merged",
+        remote_branch,
+        "--format=%(refname:short)%09%(worktreepath)",
     )
-    return bool(result.stdout.strip())
-
-
-def _delete_merged_branches(subdir: Path) -> None:
-    result = subprocess.run(
-        ["git", "branch", "--merged"],
-        capture_output=True,
-        text=True,
-        check=True,
-        cwd=subdir,
-    )
-
-    # Split the result into individual branch names
-    branches = result.stdout.splitlines()
-
-    # Filter out the current branch (marked with '*') and any excluded branches
-    filtered_branches = [
-        branch.strip()
-        for branch in branches
-        if not branch.startswith("*") and branch.strip() != "main" and not branch.startswith("+")
-    ]
-
-    if filtered_branches:
-        # Branches can appear in `git branch --merged` yet still be rejected by `git branch -d`
-        # (e.g. squash-merged or rebased PRs: merged into HEAD but not into their remote-tracking
-        # ref). Batch `git branch -d` would abort the whole repo on the first refusal; delete
-        # individually and continue so later repos and git steps still run.
-        for branch in filtered_branches:
-            proc = subprocess.run(
-                ["git", "branch", "-d", branch],
-                capture_output=True,
-                text=True,
-                cwd=subdir,
-            )
-            if proc.returncode != 0:
-                msg = (proc.stderr or proc.stdout or "").strip()
-                print(f"{subdir.name}: could not delete branch {branch!r}")
-                if msg:
-                    print(msg)
+    failed = False
+    for line in branches.splitlines():
+        branch, _, worktree = line.partition("\t")
+        if branch == default_branch or worktree:
+            continue
+        try:
+            _git(subdir, "branch", "-d", "--", branch)
+        except subprocess.CalledProcessError as exc:
+            _report_error(subdir, exc)
+            failed = True
+    return failed
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
