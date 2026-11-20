@@ -84,13 +84,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 curl -fsSL https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/main/Brewfile | brew bundle --file=-
 
-# Install [fisher](https://github.com/jorgebucaran/fisher) and the Docker
-# completions for `fish`, and set `fish` to be the default shell.
-# Python environments are managed with `uv` (from the Brewfile), so virtualfish
-# is deliberately not installed.
-
-curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
-fish -c 'fisher install barnybug/docker-fish-completion'
+# Use the bundled CLI because Docker Desktop may not have set up its CLI symlink yet.
+mkdir -p ~/.config/fish/completions
+/Applications/Docker.app/Contents/Resources/bin/docker completion fish > ~/.config/fish/completions/docker.fish
 
 xcode-select --install
 sudo xcodebuild -license
