@@ -1,0 +1,23 @@
+name: Shell lint
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  shell-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Check Bash scripts
+        run: |
+          while IFS= read -r -d '' script; do
+            bash -n "$script"
+            shellcheck --shell=bash "$script"
+          done < <(git ls-files -z -- '*.sh')
