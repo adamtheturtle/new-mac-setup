@@ -24,14 +24,22 @@ In System Settings, set the following settings:
 
 ## Install and configure software
 
-Start automated setup:
+Run the bootstrap from an Apple silicon macOS terminal.
 
 ```bash
-curl -O https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/main/setup.sh
-sudo echo 1 # this will cache the password
-bash setup.sh # this will stop when Xcode needs to be installed. Run it again after that:
+curl -fLO https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/main/setup.sh
 bash setup.sh
 ```
+
+If the Command Line Tools installer opens, finish installing them and rerun `bash setup.sh`.
+
+Sign in to the Mac App Store before installing the apps listed in `Brewfile.app-store`.
+
+```bash
+bash setup.sh --app-store
+```
+
+After installing Xcode, open it to accept the license and install the additional components.
 
 * Install iGlasses (private download link in email)
 * Set up printer

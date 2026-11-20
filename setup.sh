@@ -1,4 +1,35 @@
-set -euxo pipefail
+set -euo pipefail
+
+if [[ "$(uname -s)" != Darwin || "$(uname -m)" != arm64 ]]; then
+    printf 'Run this script from a native Apple silicon macOS terminal.\n' >&2
+    exit 1
+fi
+
+brew_bin=/opt/homebrew/bin/brew
+brewfile_base=https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/main
+case "${1:-}" in
+    --app-store)
+        if [[ ! -x "$brew_bin" ]]; then
+            printf 'Run bash setup.sh to install Homebrew first.\n' >&2
+            exit 1
+        fi
+        curl -fsSL "$brewfile_base/Brewfile.app-store" | "$brew_bin" bundle --no-upgrade --file=-
+        exit
+        ;;
+    '') ;;
+    *)
+        printf 'Usage: bash setup.sh [--app-store]\n' >&2
+        exit 2
+        ;;
+esac
+
+if ! developer_dir="$(xcode-select --print-path 2>/dev/null)" || [[ ! -d "$developer_dir" ]]; then
+    printf 'Install the Command Line Tools in the macOS dialog, then rerun bash setup.sh.\n'
+    xcode-select --install
+    exit
+fi
+
+sudo -v
 
 # System Settings
 # ---------------
@@ -70,28 +101,26 @@ fi
 rm -f "$finder_plist"
 
 # Restart the things that only read their preferences at startup.
-killall Dock
-killall Finder
-killall ControlCenter
-killall SystemUIServer
+for process in Dock Finder ControlCenter SystemUIServer; do
+    killall "$process" 2>/dev/null || true
+done
 
 # Homebrew
 # --------
 
-# Pass in /dev/null so we do not have a prompt
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ ! -x "$brew_bin" ]]; then
+    # Pass in /dev/null so the installer runs without a prompt.
+    installer="$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    /bin/bash -c "$installer" < /dev/null
+fi
+eval "$("$brew_bin" shellenv)"
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
-curl -fsSL https://raw.githubusercontent.com/adamtheturtle/new-mac-setup/main/Brewfile | brew bundle --file=-
+curl -fsSL "$brewfile_base/Brewfile" | brew bundle --no-upgrade --file=-
 
 # Use the bundled CLI because Docker Desktop may not have set up its CLI symlink yet.
 mkdir -p ~/.config/fish/completions
 /Applications/Docker.app/Contents/Resources/bin/docker completion fish > ~/.config/fish/completions/docker.fish
 
-xcode-select --install
-sudo xcodebuild -license
-
-gh auth login
 # Set up git
 
 git config --global push.default current
@@ -122,7 +151,9 @@ git pull --ff-only || echo "dotfiles: could not fast-forward, leaving the checko
 fish_path="$(which fish)"
 # Only append once: re-running setup.sh must not grow /etc/shells.
 grep -qxF "$fish_path" /etc/shells || echo "$fish_path" | sudo tee -a /etc/shells
-chsh -s "$fish_path"
+if [[ "$(dscl . -read "/Users/$(id -un)" UserShell)" != "UserShell: $fish_path" ]]; then
+    chsh -s "$fish_path"
+fi
 
 # Install [vim-plug](https://github.com/junegunn/vim-plug#installation)
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
