@@ -139,15 +139,7 @@ git remote set-url origin git@github.com:adamtheturtle/dotfiles.git
 git pull --ff-only || echo "dotfiles: could not fast-forward, leaving the checkout alone"
 ./makesymlinks.sh
 
-# Run after makesymlinks.sh: the fzf installer writes its key bindings and
-# completions into the shell config directories, so running it first means
-# those edits are replaced by the dotfiles symlinks.
-/opt/homebrew/opt/fzf/install --all
-
-# Only now that fish's configuration is symlinked into place, and fzf has added
-# its key bindings, is it safe to make fish the login shell: doing it earlier
-# leaves you logging in to a fish with no config, on a machine where the rest of
-# setup has not finished.
+# Switch the login shell after linking the Fish configuration.
 fish_path="$(which fish)"
 # Only append once: re-running setup.sh must not grow /etc/shells.
 grep -qxF "$fish_path" /etc/shells || echo "$fish_path" | sudo tee -a /etc/shells
